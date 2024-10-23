@@ -1,0 +1,13 @@
+{
+    "profile": {
+        "rol": "QE Engineer / Front End Developer",
+        "description": "Tengo conocimiento en BDD, Gherkin, SQL, testing manual y automatizado. También utilizo herramientas como Postman, Jira, JMeter, manejando conceptos sobre el SDLC/STLC y las metodologías ágiles. Me mantengo en constante capacitación en nuevas tecnologías que puedan enriquecer mi desempeño. Actualmente me desenvuelvo como QE Engineer, teniendo la capacidad de liderar, adaptarme y complementar equipos de trabajo. He participado en diversos proyectos con enfoques muy distintos, como el área de Telecomunicaciones, Mobile App, Seguros, e-commerce y Banca."
+    },
+    "experience": {
+        "rol": "QE Engineer",
+        "company": "Company A",
+        "description": "Desarrollé pruebas de software automatizadas y manuales para proyectos de telecomunicaciones, mobile app y e-commerce. Lideré equipos de trabajo y participé en la implementación de procesos de calidad y mejora continua.",
+        "duration": "2018 - 2020",
+        "technologies": "Postman, Jira, JMeter, SQL, BDD, Gherkin, SDLC/STLC, metodologías ágiles"
+    }
+}
