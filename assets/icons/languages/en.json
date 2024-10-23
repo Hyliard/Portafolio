@@ -1,0 +1,13 @@
+{
+    "profile": {
+    "role": "QE Engineer / Front End Developer",
+    "description": "I have knowledge in BDD, Gherkin, SQL, manual and automated testing. I also use tools such as Postman, Jira, JMeter, handling concepts on the SDLC / STLC and agile methodologies. I am constantly training in new technologies that can enrich my performance. Currently I work as a QE Engineer, having the ability to lead, adapt and complement work teams. I have participated in various projects with very different approaches, such as the area of ​​​​Telecommunications, Mobile App, Insurance, e-commerce and Banking."
+    },
+    "experience": {
+    "role": "QE Engineer",
+    "company": "Huenei",
+    "description": "I developed automated and manual software tests for telecommunications, mobile app and e-commerce projects. I led work teams and participated in the implementation of quality and continuous improvement processes.",
+    "duration": "2018 - 2020",
+    "technologies": "Postman, Jira, JMeter, SQL, BDD, Gherkin, SDLC/STLC, agile methodologies"
+    }
+    }
