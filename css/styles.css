@@ -342,3 +342,12 @@ body.dark {
         transform: translateX(var(--skill-bar-length));
     }
 }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--bg-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
