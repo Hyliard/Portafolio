@@ -180,6 +180,27 @@ body.dark {
         grid-column: 1 / -1;
     }
 }
+@media screen and (min-width: 760px) {
+    .card--project2 {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column: 1 / -1;
+    }
+}
+@media screen and (min-width: 760px) {
+    .card--project3 {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column: 1 / -1;
+    }
+}
+@media screen and (min-width: 760px) {
+    .card--project4 {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column: 1 / -1;
+    }
+}
 
 
 .skills {
