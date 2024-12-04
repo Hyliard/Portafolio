@@ -819,3 +819,45 @@ section.column--fullwidth {
 }
 
 
+/* Estilo específico para iPhone 13 Pro en vertical */
+@media screen and (max-width: 390px) and (max-height: 844px) {
+    .contact-card {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+/* Estilos para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu__bar ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    /* Otros ajustes de estilo para pantallas pequeñas */
+}
+
+/* Estilos para pantallas más grandes (tabletas, escritorios) */
+@media only screen and (min-width: 769px) {
+    .menu__bar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
