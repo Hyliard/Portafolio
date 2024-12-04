@@ -1,0 +1,405 @@
+:root {
+    --primary: #DD946F ;
+    --secondary: #261E5A;
+    --primary-color: hsl(214, 84%, 56%);
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color: hsl(0, 0%, 90%);
+    --bg-card-color: hsl(0, 0%, 98%);
+    --border-radius: 0.4em;
+    --transition: color 0.1s, background-color 0.2s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none; 
+}
+
+img {
+    max-width: 100%;
+    display:flex;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    font-family: sans-serif;
+}
+
+body.dark {
+    --text-color: hsl(0, 0%, 83%);
+    --bg-color: hsl(0, 0%, 15%);
+    --bg-card-color: hsl(0, 0%, 20%);
+    
+}
+/* Media query para pantallas pequeñas (como móviles) */
+@media (max-width: 768px) {
+    body {
+        background-color: var(--bg-color);
+    }
+}
+
+/* Media query para pantallas muy pequeñas (como móviles en modo retrato) */
+@media (max-width: 480px) {
+    body {
+        background-color: var(--bg-color);
+    }
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 1.5em;
+    background-color: var(--bg-card-color);
+    transition: background-color 0.3s ease-in-out;
+}
+.menu__bar {
+    position:inherit;
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    flex-direction:column;
+    padding-right: 1.5rem;
+    gap: 2rem;
+    background-color: var(--bg-card-color);
+    height: 3.75rem;
+    transition: var(--transition);
+}
+.navigation {    
+    display: flex;
+    flex-direction: row;
+    list-style-type: none ;
+    gap: 1rem;
+    padding: auto;
+
+    transition: var(--transition);
+}
+.navigation > li {
+    display: flex;
+    position: relative;
+    padding: 0.5rem;
+    cursor: pointer;
+    max-width: max-content;
+    transition: var(--transition);
+}
+.navigation > li:hover {
+    color: var(--primary-color);
+}
+.navigation > li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform:scaleX(0);
+    height: 0.125rem;
+    
+}
+
+.switches {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-theme__icon {
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+.toggle-theme__text {
+    font-size: 0.8rem;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+}
+
+.colors__item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.colors__item--blue { 
+    --primary-color: hsl(214, 84%, 56%); 
+}
+.colors__item--green { 
+    --primary-color: hsl(150, 84%, 56%); 
+}
+.colors__item--purple { 
+    --primary-color: hsl(276, 84%, 56%); 
+}
+.colors__item--orange { 
+    --primary-color: hsl(46, 84%, 56%); 
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+/* qui termina el Header */
+
+/* inicia el main */
+
+.title {
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+/* Estilo general para .main */
+.main {
+    display: grid;
+    padding: 2em;
+    gap: 1em;
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    grid-template-areas: 
+        "left-aside"
+        "middle"
+        "right-aside";
+}
+
+/* Ajustes para pantallas grandes (mayores a 620px) */
+
+@media screen and (min-width: 768px) {
+    .main {
+        grid-template-columns: 1fr 2fr 1fr; 
+        grid-template-areas: 
+            "left-aside middle right-aside"; 
+    }
+}
+
+/* Tres columnas */
+/* Distribución izquierda, centro, derecha */
+/* Estilos para la columna izquierda */
+.column--left {
+    grid-area: left-aside;
+    display: grid;
+    gap: 1em;
+}
+
+/* Estilos para la columna central */
+.column--middle {
+    grid-area: middle;
+    display: grid;
+    gap: 1em;
+}
+
+/* Estilos para la columna derecha */
+.column--right {
+    grid-area: right-aside;
+    display: grid;
+    gap: 1em;
+}
+
+/* Estilos para las tarjetas dentro de las columnas */
+.card {
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Estilos para los elementos de las skills */
+.skills__bar {
+    height: 8px;
+    border-radius: 5px;
+    background-color: #ddd;
+    transition: width 0.3s ease;
+}
+
+.skills__bar--30 {
+    width: 30%;
+    background-color: #4CAF50;
+}
+
+.skills__bar--40 {
+    width: 40%;
+    background-color: #2196F3;
+}
+
+.skills__bar--50 {
+    width: 50%;
+    background-color: #FF9800;
+}
+
+.skills__bar--70 {
+    width: 70%;
+    background-color: #f44336;
+}
+.background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem;
+}
+ 
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 75rem;
+    gap: 1.5rem;
+}
+ 
+.articles article {
+    max-width: 20rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.articles article a {
+    display: inline-flex;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+.articles article h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem;
+    color: var(--secondary);
+    transition: color 0.3s ease-out;
+}
+  
+  
+.articles article img {
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.article-preview {
+    padding: 1.5rem;
+    background: white;
+}
+
+.articles figure {
+    width: 100%;
+    height: 13rem;
+    overflow: hidden;
+}
+
+.articles figure img {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.articles article:hover img {
+    transform: scale(1.5); 
+}
+
+
+
+
+
+
+
+  
+.container-footer {
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+    background:var(--bg-color);
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+
+  }
+  
+  .container-footer footer {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .container-footer footer .logo-footer {
+    text-align: center;
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-footer footer .logo-footer img {
+    width: 100px; 
+  }
+  
+  footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .container-footer footer .redes-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .container-footer footer .redes-footer .icon-redes {
+    font-size: 30px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+  }
+  
+  footer .redes-footer .fa-linkedin-in:hover {
+    background: #0e76a8;
+    color: #fff;
+  }
+  
+  footer .redes-footer .fa-github:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  footer .redes-footer .fa-twitch:hover {
+    background: #6441a5;
+    color: #fff;
+  }
+  
+  .container-footer footer hr {
+    border: 1px solid #a2a2a2;
+  }
+  
+  .container-footer h4 {
+    text-align: center;
+    color: #a2a2a2;
+    margin-top: 20px;
+  }

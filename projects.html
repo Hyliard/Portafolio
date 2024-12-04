@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cards</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"type='text/css'>
+        <link rel="stylesheet" href="css/styles1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body class="dark">
+        <header class="header">
+            <!-- Contenedor de switches (modo oscuro y colores) -->
+            <nav class="switches">
+                <!-- Toggle de tema -->
+                <div id="toggle-theme" class="toggle-theme" role="button" aria-label="Cambiar tema">
+                    <img id="toggle-icon" src="assets/icons/moon.svg" alt="Icono de tema oscuro" class="toggle-theme__icon" />
+                    <p id="toggle-text" class="toggle-theme__text">Dark Mode</p>
+                </div>
+            </nav>
+        
+            
+            </div>
+            <!-- Menu bar -->
+            <div class="menu__bar">
+                <ul class="navigation">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+        
+            <!-- Contenedor de selección de colores -->
+            <div id="toggle-colors" class="colors" aria-label="Seleccionar color de tema">
+                <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue" aria-label="Color Azul"></div>
+                <div data-color="hsl(150, 84%, 56%)" class="colors__item colors__item--green" aria-label="Color Verde"></div>
+                <div data-color="hsl(276, 84%, 56%)" class="colors__item colors__item--purple" aria-label="Color Púrpura"></div>
+                <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange" aria-label="Color Naranja"></div>
+            </div>
+        </header>
+        <div class="background">
+            <div class="centering">
+                <div class="articles">
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/CIfrado img.png"
+                                alt="Cifrado Cesar de Luis" class="card__image"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Cifrado Cesar</h2>
+                            <p>
+                                Esta aplicación web permite cifrar texto utilizando el algoritmo del Cifrado César, un método clásico de
+                                criptografía.
+                                Los usuarios pueden ingresar un texto y especificar un valor de desplazamiento, y la aplicación genera el texto
+                                cifrado en tiempo real.
+                                La aplicación presenta una
+                                <span class="more-text" style="display: none;">
+                                     interfaz limpia y moderna que facilita la entrada de texto y el ajuste del
+                                desplazamiento. Al hacer clic en el botón "Cifrar", el texto ingresado se transforma inmediatamente, permitiendo a los usuarios ver
+                                    el resultado al instante.<br>
+                                    Se asegura que el desplazamiento esté dentro de un rango válido (1-25) para evitar errores.<br>
+                                    Diseñada con una paleta de colores suaves y un diseño responsivo, la aplicación ofrece una experiencia visual
+                                    agradable..
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <div class="buttons">
+                                    <a href="https://hyliard.github.io/Cifradorcesar.github.io/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
+                                    <a href="https://github.com/Hyliard/Cifradorcesar.github.io" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                                </div>
+                            </p>
+                        </div>                        
+                    </article>
+                    <article>            
+                        <figure>
+                            <img
+                                src="assets/images/calculadora.png"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Calculadora</h2>
+                            <p>
+                                Una calculadora sencilla y elegante que permite realizar operaciones matemáticas básicas con facilidad. Con una
+                                interfaz intuitiva y un diseño limpio, esta app está construida con tecnologías modernas como HTML, CSS y
+                                JavaScript, proporcionando una experiencia de usua
+                                <span class="more-text" style="display: none;">
+                                    rio fluida y rápida. Ideal para cálculos rápidos y cotidianos..
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                            <div class="buttons">
+                                    <a href="https://hyliard.github.io/CalculadoraResponsiva/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
+                                    <a href="https://github.com/Hyliard/CalculadoraResponsiva" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                                </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/App1.png"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>IMC Calculator</h2>
+                            <p>
+                                IMC Calculator es una aplicación intuitiva y fácil de usar que te permite calcular tu índice de masa corporal de manera
+                                rápida y precisa. <br> Ingresa tus datos y obtén información sobre tu peso ideal y estado de salud. <br>Con una interfaz
+                                atractiva y personalizable, esta app
+                                <span class="more-text" style="display: none;">
+                                     es la herramienta perfecta para monitorear tu bienestar físico y alcanzar tus
+                                objetivos de salud.
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <div class="buttons">
+                                       <a href="https://github.com/Hyliard/AppIMCiOS" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                                </div>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/App2.png"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Buscador de Super Heroes</h2>
+                            <p>
+                                Superhero Searcher es una aplicación innovadora que te permite encontrar y explorar información detallada sobre tus
+                                superhéroes favoritos. <br>Utilizando una potente API, la app ofrece búsquedas rápidas y precisas, proporcionando
+                                datos sobre la historia,
+                                <span class="more-text" style="display: none;">habilidades y apariciones de cada superhéroe. Con una interfaz
+                                    moderna y fácil de usar,
+                                    Superhero Searcher es la herramienta definitiva para todos los fanáticos de los superhéroes.
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <div class="buttons">
+                                    <a href="https://github.com/Hyliard/SuperheroSearch" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                             </div>
+                            </p>
+                        </div>
+                    </article>
+                    <article>            
+                        <figure>
+                            <img
+                                src="assets/images/Enconstruccion.JPG"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Lista de Tareas por Hacer</h2>
+                            <p>
+                                sus tareas diarias de manera eficiente. Con una interfaz limpia y fácil de usar, permite agregar nuevas tareas,
+                                editarlas, marcarlas como completadas o eliminarlas. Los usuarios pueden organizar sus actividades, priorizarlas y
+                                tener un control total sobre su productividad. Además,  
+                                <span class="more-text" style="display: none;">
+                                    
+                                    la aplicación guarda tus tareas localmente, asegurando que no pierdas tu progreso. Es una herramienta ideal para
+                                    mantenerte organizado, optimizar tu tiempo y mejorar la productividad tanto en el trabajo como en la vida diaria.
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <div class="buttons">
+                                    <a href="https://github.com/Hyliard/TodoListApp" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                                </div>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/Enconstruccion.JPG"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Generador de Contraseñas</h2>
+                            <p>
+                                Esta herramienta en línea permite generar contraseñas fuertes y aleatorias en segundos, asegurando la protección de
+                                tus cuentas. Ofrece opciones personalizables como longitud y caracteres, garantizando contraseñas únicas y difíciles
+                                de adivinar, siguiendo las mejores prácticas de seguridad.
+                                <span class="more-text" style="display: none;">
+                                    Además, la aplicación incluye una función de copiar la contraseña directamente al portapapeles
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                            <div class="buttons">
+                                <a href="https://hyliard.github.io/PassGenerator/" target="_blank" rel="noopener" class="button button--ghost">Demo</a>
+                                <a href="https://github.com/Hyliard/PassGenerator" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/Enconstruccion.JPG"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>My Blog 7</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. 
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan.
+                                <span class="more-text" style="display: none;">
+                                    Además, la aplicación incluye una función de copiar la contraseña directamente al portapapeles
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                        </div>
+                    </article>
+                    <article>            
+                        <figure>
+                            <img
+                                src="assets/images/Enconstruccion.JPG"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>My Blog 8</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. 
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. 
+                                <span class="more-text" style="display: none;">
+                                    Además, la aplicación incluye una función de copiar la contraseña directamente al portapapeles
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/webpage.png"
+                                alt="Preview"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Portfolio</h2>
+                            <p>
+                                Este portfolio es una representación personal de mis habilidades, experiencia y proyectos en el ámbito del
+                                desarrollo web y la programación. Su objetivo es mostrar de manera efectiva
+                                <span class="more-text" style="display: none;">
+                                    mi trabajo y el enfoque que tengo
+                                    hacia el diseño y la implementación de aplicaciones web.
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                        </div>
+                        </article>
+                </div>
+            </div>
+        </div>
+        <div class="container-footer">
+            <footer>
+                <!-- Logo del pie de página -->
+                <div class="logo-footer">
+                  <img src="assets/images/Gaming Logo.png" alt="Logo de Gaming de Hyliard" />
+                </div>
+                
+                <!-- Enlaces a redes sociales -->
+                <div class="redes-footer">
+                  <a href="https://www.linkedin.com/in/luis-gerardo-martinez-03898582/" target="_blank" rel="noopener" aria-label="LinkedIn de Luis Gerardo Martínez">
+                    <i class="fab fa-linkedin-in icon-redes"></i>
+                  </a>
+                  <a href="https://github.com/Hyliard" target="_blank" rel="noopener" aria-label="GitHub de Hyliard">
+                    <i class="fab fa-github icon-redes"></i>
+                  </a>
+                  <a href="https://www.twitch.tv/hyliard" target="_blank" rel="noopener" aria-label="Twitch de Hyliard">
+                    <i class="fab fa-twitch icon-redes"></i>
+                  </a>
+                </div>
+              
+                <!-- Separador horizontal -->
+                <hr />
+                
+                <!-- Derechos de autor -->
+                <p>© 2024 Hyliard. Todos los derechos reservados.</p>
+                
+                <!-- Nombre de la persona -->
+                <h4>Luis Gerardo Martínez Hernández</h4>
+            </footer>
+        </div>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+
+
+
+
