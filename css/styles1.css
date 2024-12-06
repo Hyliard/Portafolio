@@ -31,6 +31,7 @@ body {
     color: var(--text-color);
     transition: var(--transition);
     font-family: sans-serif;
+    font-size: 16px;
 }
 
 body.dark {
@@ -247,75 +248,162 @@ body.dark {
     width: 70%;
     background-color: #f44336;
 }
+
+
+
+
+/* --- Fondo y contenedor principal --- */
 .background {
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: start;
-    padding: 2rem;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
- 
-.articles {
-    display: flex;
-    flex-wrap: wrap;
+
+.centering {
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    justify-content: center;
-    max-width: 75rem;
-    gap: 1.5rem;
 }
- 
-.articles article {
-    max-width: 20rem;
-    cursor: pointer;
-    position: relative;
-    display: block;
-    transition: all 0.4s ease-in-out;
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* --- Artículos (tarjetas) --- */
+article {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
     overflow: hidden;
-    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.articles article a {
-    display: inline-flex;
-    color: var(--primary);
-    text-decoration: none;
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow-color);
 }
 
-
-.articles article h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1.6rem;
-    color: var(--secondary);
-    transition: color 0.3s ease-out;
-}
-  
-  
-.articles article img {
-    max-width: 100%;
-    transform-origin: center;
-    transition: transform 0.4s ease-in-out;
-}
-  
-.article-preview {
-    padding: 1.5rem;
-    background: white;
+figure {
+    margin: 0;
 }
 
-.articles figure {
+.card__image {
     width: 100%;
-    height: 13rem;
-    overflow: hidden;
-}
-
-.articles figure img {
-    height: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
+    height: auto;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.articles article:hover img {
-    transform: scale(1.5); 
+article:hover .card__image {
+    transform: scale(1.05);
 }
+
+/* --- Contenido del artículo --- */
+.article-preview {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* --- Texto extra (expandible) --- */
+.more-text {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: hsl(0, 0%, 50%);
+}
+
+/* --- Enlace "Leer más" --- */
+.read-more {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Botones dentro de los artículos --- */
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.button--ghost {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button--ghost:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.25em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .buttons {
+        text-align: center;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .articles {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* aqui termina la parte de proyectos */
 
 
 
