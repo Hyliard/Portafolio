@@ -63,18 +63,6 @@ body.dark {
     transition: background-color 0.3s ease-in-out;
 }
 
-/*.menu__bar {
-    position: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: column;
-    padding-right: 1.5rem;
-    gap: 2rem;
-    background-color: var(--bg-card-color);
-    height: 3.75rem;
-    transition: var(--transition);
-}*/
 
 .navigation {
     display: flex;
