@@ -30,7 +30,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: var(--transition);
-    font-family: sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-size: 16px;
 }
 
@@ -285,7 +285,7 @@ article {
 
 article:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px var(--shadow-color);
+    box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 figure {
@@ -309,6 +309,7 @@ article:hover .card__image {
 }
 
 h2 {
+    font-weight: 600;
     font-size: 1.5em;
     color: var(--primary-color);
     margin-bottom: 10px;
