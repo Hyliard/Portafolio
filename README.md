@@ -38,40 +38,68 @@ Con años de experiencia en QA, he aprendido a valorar la precisión, la organiz
 
 ---
 
-## 🌟 Proyectos Destacados
+## 🚀 Proyectos Destacados
 
-### 🔢 Calculadora Básica  
-Calculadora web simple con modo oscuro y operaciones básicas.  
-**Tecnologías:** HTML, CSS, JavaScript  
-📎 [Ver proyecto](#) | [Código fuente](#)
+Aquí te muestro una selección de proyectos donde he aplicado mis habilidades como desarrollador frontend e iOS. Cada uno refleja mi enfoque en la calidad, la funcionalidad y la experiencia de usuario.
 
 ---
 
-### 🔐 Generador de Contraseñas  
-Aplicación para generar contraseñas seguras y aleatorias. Personalizable por longitud y tipo de caracteres.  
+### 🔐 Cifrador César
+Cifra textos usando el algoritmo de César, ideal para ejercicios de criptografía básica.  
 **Tecnologías:** HTML, CSS, JavaScript  
-📎 [Ver proyecto](#) | [Código fuente](#)
+🔗 [Ver proyecto](https://hyliard.github.io/Cifradorcesar.github.io/) | 📁 [Código fuente](https://github.com/Hyliard/Cifradorcesar.github.io)
 
 ---
 
-### ✂️ Acortador de Links  
-Herramienta que convierte URLs largas en enlaces cortos, útil para compartir en redes o mensajes.  
-**Tecnologías:** HTML, CSS, JavaScript, API REST  
-📎 [Ver proyecto](#) | [Código fuente](#)
+### 🔓 Descifrador César
+Complemento del proyecto anterior: descifra textos cifrados con desplazamientos personalizados.  
+**Tecnologías:** HTML, CSS, JavaScript  
+🔗 [Ver proyecto](https://hyliard.github.io/Decifrador-Cesar/) | 📁 [Código fuente](https://github.com/Hyliard/Decifrador-Cesar)
 
 ---
 
-### 🔒 Cifrador / Descifrador César  
-Aplicación web para cifrar y descifrar mensajes usando el algoritmo César. Ideal para introducirse en la criptografía clásica.  
+### 🔢 Generador de Contraseñas
+Aplicación que genera contraseñas seguras con opciones de longitud y caracteres personalizados.  
 **Tecnologías:** HTML, CSS, JavaScript  
-📎 [Ver proyecto](#) | [Código fuente](#)
+🔗 [Ver proyecto](https://hyliard.github.io/PassGenerator/) | 📁 [Código fuente](https://github.com/Hyliard/PassGenerator)
 
 ---
 
-### 🧑‍💼 Portafolio Personal  
-Mi espacio profesional donde muestro proyectos, tecnologías y experiencias.  
+### 🔗 Acortador de URL
+Herramienta práctica para reducir URLs extensas de forma rápida y sencilla.  
 **Tecnologías:** HTML, CSS, JavaScript  
-📎 [Ver proyecto](#) | [Código fuente](#)
+🔗 [Ver proyecto](https://hyliard.github.io/AcortadorURL/) | 📁 [Código fuente](https://github.com/Hyliard/AcortadorURL)
+
+---
+
+### 🧮 Calculadora Responsiva
+Calculadora web sencilla, funcional y adaptable a dispositivos móviles.  
+**Tecnologías:** HTML, CSS, JavaScript  
+🔗 [Ver proyecto](https://hyliard.github.io/CalculadoraResponsiva/) | 📁 [Código fuente](https://github.com/Hyliard/CalculadoraResponsiva)
+
+---
+
+### 📱 Apps iOS (SwiftUI)
+
+#### 📲 App IMC iOS
+Calculadora de Índice de Masa Corporal con diseño minimalista en SwiftUI.  
+📁 [Código fuente](https://github.com/Hyliard/AppIMCiOS)
+
+#### 🦸 Superhero Search
+App para buscar superhéroes usando una API, con búsqueda y listado.  
+📁 [Código fuente](https://github.com/Hyliard/SuperheroSearch)
+
+#### ✅ Todo List App
+Lista de tareas con persistencia local y manejo de estados.  
+📁 [Código fuente](https://github.com/Hyliard/TodoListApp)
+
+---
+
+### 🌐 Portafolio Personal
+Mi espacio para mostrar quién soy, qué hago y en qué creo como desarrollador.  
+**Tecnologías:** HTML, CSS, JavaScript  
+🔗 [Ver proyecto](https://hyliard.github.io/Portafolio/) | 📁 [Código fuente](https://github.com/Hyliard/Portafolio)
+
 
 ---
 
