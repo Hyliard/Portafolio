@@ -29,7 +29,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: var(--transition);
-    font-family: sans-serif;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
 }
 
 body.dark {
@@ -706,10 +707,10 @@ footer .redes-footer .fa-github:hover {
     color: #fff;
 }
 
-footer .redes-footer .fa-twitch:hover {
-    background: #6441a5;
+footer .redes-footer .fa-whatsapp:hover {
+    background: #25d366;
     color: #fff;
-}
+  }
 
 .container-footer footer hr {
     border: 1px solid #a2a2a2;

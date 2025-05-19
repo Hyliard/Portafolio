@@ -12,7 +12,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
 }
 
 a {
@@ -157,15 +157,11 @@ body.dark {
     color: var(--primary-color);
     transition: var(--transition);
 }
-/* qui termina el Header */
+/* aqui termina el Header */
 
 /* inicia el main */
 
-.title {
-    text-align: center;
-    color: var(--primary-color);
-    transition: var(--transition);
-}
+
 
 /* Estilo general para .main */
 .main {
@@ -189,219 +185,12 @@ body.dark {
     }
 }
 
-/* Tres columnas */
-/* Distribución izquierda, centro, derecha */
-/* Estilos para la columna izquierda */
-.column--left {
-    grid-area: left-aside;
-    display: grid;
-    gap: 1em;
-}
-
-/* Estilos para la columna central */
-.column--middle {
-    grid-area: middle;
-    display: grid;
-    gap: 1em;
-}
-
-/* Estilos para la columna derecha */
-.column--right {
-    grid-area: right-aside;
-    display: grid;
-    gap: 1em;
-}
-
-/* Estilos para las tarjetas dentro de las columnas */
-.card {
-    padding: 1em;
-    background-color: var(--bg-card-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-
-/* Estilos para los elementos de las skills */
-.skills__bar {
-    height: 8px;
-    border-radius: 5px;
-    background-color: #ddd;
-    transition: width 0.3s ease;
-}
-
-.skills__bar--30 {
-    width: 30%;
-    background-color: #4CAF50;
-}
-
-.skills__bar--40 {
-    width: 40%;
-    background-color: #2196F3;
-}
-
-.skills__bar--50 {
-    width: 50%;
-    background-color: #FF9800;
-}
-
-.skills__bar--70 {
-    width: 70%;
-    background-color: #f44336;
-}
 
 
 
 
-/* --- Fondo y contenedor principal --- */
-.background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
 
-.centering {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.articles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-/* --- Artículos (tarjetas) --- */
-article {
-    background-color: var(--card-bg-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow-color);
-}
-
-figure {
-    margin: 0;
-}
-
-.card__image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-article:hover .card__image {
-    transform: scale(1.05);
-}
-
-/* --- Contenido del artículo --- */
-.article-preview {
-    padding: 20px;
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 1.5em;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1em;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-/* --- Texto extra (expandible) --- */
-.more-text {
-    display: none;
-    margin-top: 10px;
-    font-size: 0.95em;
-    color: hsl(0, 0%, 50%);
-}
-
-/* --- Enlace "Leer más" --- */
-.read-more {
-    color: var(--primary-color);
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.read-more:hover {
-    color: var(--secondary-color);
-}
-
-/* --- Botones dentro de los artículos --- */
-.buttons {
-    margin-top: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 10px;
-}
-
-.button--primary {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.button--primary:hover {
-    background-color: var(--secondary-color);
-}
-
-.button--ghost {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.button--ghost:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* --- Responsividad --- */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.25em;
-    }
-
-    p {
-        font-size: 0.95em;
-    }
-
-    .buttons {
-        text-align: center;
-    }
-
-    .button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .articles {
-        grid-template-columns: 1fr;
-    }
-}
 
 
 /* aqui termina la parte de proyectos */

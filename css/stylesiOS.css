@@ -12,13 +12,43 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none; 
 }
+
+.ios-projects-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--bg-card-color);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.ios-projects-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--bg-card-color);
+  text-align: center;
+}
+
+.ios-projects-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.ios-projects-section p:last-child {
+  margin-bottom: 0;
+}
+
 
 img {
     max-width: 100%;
@@ -157,15 +187,11 @@ body.dark {
     color: var(--primary-color);
     transition: var(--transition);
 }
-/* qui termina el Header */
+/* aqui termina el Header */
 
 /* inicia el main */
 
-.title {
-    text-align: center;
-    color: var(--primary-color);
-    transition: var(--transition);
-}
+
 
 /* Estilo general para .main */
 .main {
@@ -189,219 +215,202 @@ body.dark {
     }
 }
 
-/* Tres columnas */
-/* Distribución izquierda, centro, derecha */
-/* Estilos para la columna izquierda */
-.column--left {
-    grid-area: left-aside;
-    display: grid;
-    gap: 1em;
-}
-
-/* Estilos para la columna central */
-.column--middle {
-    grid-area: middle;
-    display: grid;
-    gap: 1em;
-}
-
-/* Estilos para la columna derecha */
-.column--right {
-    grid-area: right-aside;
-    display: grid;
-    gap: 1em;
-}
-
-/* Estilos para las tarjetas dentro de las columnas */
-.card {
-    padding: 1em;
-    background-color: var(--bg-card-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-
-/* Estilos para los elementos de las skills */
-.skills__bar {
-    height: 8px;
-    border-radius: 5px;
-    background-color: #ddd;
-    transition: width 0.3s ease;
-}
-
-.skills__bar--30 {
-    width: 30%;
-    background-color: #4CAF50;
-}
-
-.skills__bar--40 {
-    width: 40%;
-    background-color: #2196F3;
-}
-
-.skills__bar--50 {
-    width: 50%;
-    background-color: #FF9800;
-}
-
-.skills__bar--70 {
-    width: 70%;
-    background-color: #f44336;
-}
-
-
-
-
-/* --- Fondo y contenedor principal --- */
+/* aqui termina el header */
+/* aqui empieza la parte de proyectos */
+/* Estilo para la sección de proyectos */
+/* Estilos generales para la sección */
 .background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: var(--bg-color);
+    
+    padding: 4rem 0;
     min-height: 100vh;
-    padding: 20px;
 }
 
 .centering {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .articles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
-/* --- Artículos (tarjetas) --- */
+.articles h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.articles h1:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    
+    border-radius: 2px;
+}
+
+.articles p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* Estilos para los artículos/proyectos */
 article {
-    background-color: var(--card-bg-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px var(--shadow-color);
+    background: var(--bg-card-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 article:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow-color);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
 }
 
+@media (min-width: 768px) {
+    article {
+        flex-direction: row;
+        min-height: 280px;
+    }
+}
+
+/* Estilos para las imágenes */
 figure {
-    margin: 0;
+    flex: 1;
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
 }
 
-.card__image {
+figure img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
-article:hover .card__image {
+article:hover figure img {
     transform: scale(1.05);
 }
 
-/* --- Contenido del artículo --- */
+/* Estilos para el contenido del artículo */
 .article-preview {
-    padding: 20px;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-h2 {
-    font-weight: 600;
-    font-size: 1.5em;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1em;
+.article-preview h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
-/* --- Texto extra (expandible) --- */
-.more-text {
-    display: none;
-    margin-top: 10px;
-    font-size: 0.95em;
-    color: hsl(0, 0%, 50%);
+.article-preview p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
 }
 
-/* --- Enlace "Leer más" --- */
+/* Estilos para el botón "Leer más" */
 .read-more {
-    color: var(--primary-color);
-    font-weight: bold;
+    color: #4299e1;
+    font-weight: 600;
     text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
 .read-more:hover {
-    color: var(--secondary-color);
+    color: #2b6cb0;
+    text-decoration: underline;
 }
 
-/* --- Botones dentro de los artículos --- */
+.more-text {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para los botones de acción */
 .buttons {
-    margin-top: 20px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 10px;
-}
-
-.button--primary {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.button--primary:hover {
-    background-color: var(--secondary-color);
+    transition: all 0.2s ease;
 }
 
 .button--ghost {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid #4299e1;
+    color: #4299e1;
 }
 
 .button--ghost:hover {
-    background-color: var(--primary-color);
+    background: #4299e1;
     color: white;
+    transform: translateY(-2px);
 }
 
-/* --- Responsividad --- */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.25em;
-    }
-
-    p {
-        font-size: 0.95em;
-    }
-
-    .buttons {
-        text-align: center;
-    }
-
-    .button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .articles {
-        grid-template-columns: 1fr;
-    }
+/* Efecto de hover para el artículo */
+article {
+    position: relative;
+    z-index: 1;
 }
+
+article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(66, 153, 225, 0.1) 0%, rgba(66, 153, 225, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
 
 
 /* aqui termina la parte de proyectos */

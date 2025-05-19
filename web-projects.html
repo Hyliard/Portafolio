@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Proyectos</title>
+        <meta name="description" content="Portafolio de proyectos de desarrollo web y aplicaciones de Luis Gerardo Martínez">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/stylesWeb.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
+    </head>
+    <body class="dark">
+        <header class="header">
+            <!-- Contenedor de switches (modo oscuro y colores) -->
+            <nav class="switches">
+                <!-- Toggle de tema -->
+                <div id="toggle-theme" class="toggle-theme" role="button" aria-label="Cambiar tema">
+                    <img id="toggle-icon" src="assets/icons/moon.svg" alt="Icono de tema oscuro" class="toggle-theme__icon" />
+                    <p id="toggle-text" class="toggle-theme__text"></p>
+                </div>
+            </nav>
+        
+            
+            </div>
+            <!-- Menu bar -->
+            <div class="menu__bar">
+                <ul class="navigation">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+ 
+            <!-- Contenedor de selección de colores -->
+            <div id="toggle-colors" class="colors" aria-label="Seleccionar color de tema">
+                <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue" aria-label="Color Azul"></div>
+                <div data-color="hsl(150, 84%, 56%)" class="colors__item colors__item--green" aria-label="Color Verde"></div>
+                <div data-color="hsl(276, 84%, 56%)" class="colors__item colors__item--purple" aria-label="Color Púrpura"></div>
+                <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange" aria-label="Color Naranja"></div>
+            </div>
+        </header>
+        <section class="web-projects-section">
+            <h1>Proyectos</h1>
+            <p>
+                Estos son algunos de mis proyectos más destacados, donde he aplicado mis habilidades en desarrollo web con HTML, CSS
+                y JavaScript. <br>
+                Cada uno refleja mi enfoque práctico, aprendizaje constante y compromiso con crear interfaces funcionales y bien
+                estructuradas.
+            </p>
+        </section>
+
+        <div class="background">
+            <div class="centering">
+                <div class="articles">
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/CIfrado.png"
+                                alt="Cifrado Cesar de Luis" class="card__image" loading="lazy"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Cifrado Cesar</h2>
+                            <p>
+                                Esta aplicación web permite cifrar texto utilizando el algoritmo del Cifrado César, un método clásico de
+                                criptografía.
+                                Los usuarios pueden ingresar un texto y especificar un valor de desplazamiento, y la aplicación genera el texto
+                                cifrado en tiempo real.
+                                La aplicación presenta una
+                                <span class="more-text" style="display: none;">
+                                     interfaz limpia y moderna que facilita la entrada de texto y el ajuste del
+                                desplazamiento. Al hacer clic en el botón "Cifrar", el texto ingresado se transforma inmediatamente, permitiendo a los usuarios ver
+                                    el resultado al instante.<br>
+                                    Se asegura que el desplazamiento esté dentro de un rango válido (1-25) para evitar errores.<br>
+                                    Diseñada con una paleta de colores suaves y un diseño responsivo, la aplicación ofrece una experiencia visual
+                                    agradable..
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <div class="buttons">
+                                    <a href="https://hyliard.github.io/Cifradorcesar.github.io/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
+                                    <a href="https://github.com/Hyliard/Cifradorcesar.github.io" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                                </div>
+                            </p>
+                        </div>                        
+                    </article>
+                    <article>            
+                        <figure>
+                            <img
+                                src="assets/images/Calculadora.png"
+                                alt="Preview" loading="lazy"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Calculadora</h2>
+                            <p>
+                                Una calculadora sencilla y elegante que permite realizar operaciones matemáticas básicas con facilidad. Con una
+                                interfaz intuitiva y un diseño limpio, esta app está construida con tecnologías modernas como HTML, CSS y
+                                JavaScript, proporcionando una experiencia de usua
+                                <span class="more-text" style="display: none;">
+                                    rio fluida y rápida. Ideal para cálculos rápidos y cotidianos..
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                            <div class="buttons">
+                                    <a href="https://hyliard.github.io/CalculadoraResponsiva/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
+                                    <a href="https://github.com/Hyliard/CalculadoraResponsiva" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                                </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/decifrador.png"
+                                alt="Preview" loading="lazy"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Decodificador de Cifrado César</h2>
+                            <p>Este proyecto es un decifrador César interactivo que permite descifrar mensajes encriptados con el algoritmo clásico de
+                            sustitución. 
+                            <span class="more-text" style="display: none;">
+                                Usando HTML para la estructura, CSS para el diseño visual y JavaScript para la lógica del descifrado, los
+                            usuarios pueden introducir un mensaje cifrado y una clave (número de desplazamiento) para obtener el texto original. El
+                            decifrador funciona en tiempo real, mostrando los resultados instantáneamente y adaptándose a diferentes dispositivos
+                            con un diseño responsivo.
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                            <div class="buttons">
+                                <a href="https://hyliard.github.io/Decifrador-Cesar/" target="_blank" rel="noopener" class="button button--ghost">Demo</a>
+                                <a href="https://github.com/Hyliard/Decifrador-Cesar" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/passgenerator.png"
+                                alt="Preview" loading="lazy"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Generador de Contraseñas</h2>
+                            <p>
+                                Esta herramienta en línea permite generar contraseñas fuertes y aleatorias en segundos, asegurando la protección de
+                                tus cuentas. Ofrece opciones personalizables como longitud y caracteres, garantizando contraseñas únicas y difíciles
+                                de adivinar, siguiendo las mejores prácticas de seguridad.
+                                <span class="more-text" style="display: none;">
+                                    Además, la aplicación incluye una función de copiar la contraseña directamente al portapapeles
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                            <div class="buttons">
+                                <a href="https://hyliard.github.io/PassGenerator/" target="_blank" rel="noopener" class="button button--ghost">Demo</a>
+                                <a href="https://github.com/Hyliard/PassGenerator" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article>            
+                        <figure>
+                            <img
+                                src="assets/images/URLshorter.png"
+                                alt="Preview" loading="lazy"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Acortador de Enlaces</h2>
+                            <p>
+                                Aplicación web que transforma enlaces largos en URLs compactas. Desarrollada con HTML, CSS y JavaScript, integra
+                                múltiples APIs con sistema de respaldo. Interfaz responsive con validación en tiempo real y diseño moderno.
+                                <span class="more-text" style="display: none;">
+                                    Nota: Actualmente funciona como simulador de acortamiento (debido a restricciones de APIs públicas), con
+                                    arquitectura lista para integrar un backend propio que permita:
+                                    ◉ Guardar historial de enlaces
+                                    ◉ Generar estadísticas de clicks
+                                    ◉ Crear URLs personalizadas
+                                </span>
+                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                            </p>
+                            <div class="buttons">
+                                <a href="https://hyliard.github.io/AcortadorURL/" target="_blank" rel="noopener" class="button button--ghost">Demo</a>
+                                <a href="https://github.com/Hyliard/AcortadorURL" target="_blank" rel="noopener" class="button button--ghost">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <figure>
+                            <img
+                                src="assets/images/webpage.png"
+                                alt="Preview" loading="lazy"
+                            >
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Portfolio</h2>
+                            <p>
+                                Este portfolio es una representación personal de mis habilidades, experiencia y proyectos en el ámbito del
+                                desarrollo web y la programación. Su objetivo es mostrar de manera efectiva mi trabajo y el enfoque que tengo
+                                hacia el diseño y la implementación de aplicaciones web.
+                            </p>
+                        </div>
+                        </article>
+                </div>
+            </div>
+        </div>
+        <div class="container-footer">
+            <footer>
+                <!-- Logo del pie de página -->
+                <div class="logo-footer">
+                  <img src="assets/images/Gaming Logo.png" alt="Logo de Gaming de Hyliard" loading="lazy" />
+                </div>
+                
+                <!-- Enlaces a redes sociales -->
+                <div class="redes-footer">
+                  <a href="https://www.linkedin.com/in/luis-gerardo-martinez-03898582/" target="_blank" rel="noopener" aria-label="LinkedIn de Luis Gerardo Martínez">
+                    <i class="fab fa-linkedin-in icon-redes"></i>
+                  </a>
+                  <a href="https://github.com/Hyliard" target="_blank" rel="noopener" aria-label="GitHub de Hyliard">
+                    <i class="fab fa-github icon-redes"></i>
+                  </a>
+                  <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Twitch de Hyliard">
+                    <i class="fab fa-whatsapp icon icon-redes"></i>
+                </a>
+                </div>
+              
+                <!-- Separador horizontal -->
+                <hr />
+                
+                <!-- Derechos de autor -->
+                <p>© 2025 Hyliard. Todos los derechos reservados.</p>
+                
+                <!-- Nombre de la persona -->
+                <h4>Luis Gerardo Martínez Hernández</h4>
+            </footer>
+        </div>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
