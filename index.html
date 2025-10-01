@@ -43,46 +43,37 @@
     <main class="main">
         <section class="column column--left">
             <!-- PROFILE CARD -->
-            <article class="card card--profile">
-                <div class="card__image--profile">
-                    <img src="assets/images/Profile.jpg" alt="Profile Picture" loading="lazy">
+        <article class="card card--profile">
+            <div class="card__image--profile">
+                <img src="assets/images/Profile.jpg" alt="Profile Picture" loading="lazy">
+            </div>
+            <div class="card__header">
+                <h2 class="card__title no-margin">Luis Gerardo Martínez</h2>
+                <p class="card__subtitle" data-section="profile" data-value="title">
+                    Ingeniero de Telecomunicaciones
+                </p>
+            </div>
+            <div class="card__body">
+                <div class="card__link">
+                    <i class="fas fa-envelope icon"></i>
+                    <a href="mailto:luisgerardomartinezh@gmail.com">Luisgerardomartinezh@gmail.com</a>
                 </div>
-                <div class="card__header">
-                    <h2 class="card__title no-margin">Luis Gerardo Martínez</h2>
-                    <p class="card__subtitle" data-section="profile" data-value="title">Ingeniero de Telecomunicaciones</p>
-                    <p class="card__subtitle" data-section="profile" data-value="roles">
-                        QA Analyst Sr. / QA Automation Engineer Jr. <br>
-                        Front-End Developer (en formación) / iOS Developer (en formación)
-                    </p>
-                    <p class="card__description">
-                        Actualmente, estoy en proceso de formación en desarrollo iOS y Front-End, con el objetivo de complementar mi
-                        experiencia en QA con habilidades de desarrollo para crear aplicaciones de alta calidad.
-                    </p>
+                <div class="card__link">
+                    <i class="fab fa-whatsapp icon"></i>
+                    <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
+                        target="_blank" rel="noopener">
+                        Enviar mensaje por WhatsApp
+                    </a>
                 </div>
-                <div class="card__body">
-                    <div class="card__link">
-                        <i class="fas fa-envelope icon"></i>
-                        <a href="mailto:luisgerardomartinezh@gmail.com">Luisgerardomartinezh@gmail.com</a>
-                    </div>
-                    <div class="card__link">
-                        <i class="fab fa-whatsapp icon"></i>
-                        <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
-                            target="_blank" rel="noopener">
-                            Enviar mensaje por WhatsApp
-                        </a>
-                    </div>
-                    <p class="card__text" data-section="profile" data-value="description">
-                        Tengo conocimiento en BDD, Gherkin, SQL, testing manual y automatizado.
-                        También utilizo herramientas como Postman, Jira, JMeter, manejando conceptos sobre el SDLC/STLC
-                        y las metodologías ágiles.
-                        Me mantengo en constante capacitación en nuevas tecnologías que puedan enriquecer mi desempeño.
-                        Actualmente me desenvuelvo como QE Engineer, teniendo la capacidad de liderar, adaptarme y
-                        complementar equipos de trabajo.
-                        He participado en diversos proyectos con enfoques muy distintos, como el área de
-                        Telecomunicaciones, Mobile App, Seguros, e-commerce y Banca.
-                    </p>
-                </div>
-            </article>
+        
+                <h3 class="card__subtitle">Formación</h3>
+                <p class="card__text">Ingeniero en Telecomunicaciones (2015) · TSU en Electrónica (2010)</p>
+                <p class="card__text">Cursos: Selenium, Cypress, Dynatrace, SwiftUI, Node.js</p>
+            </div>
+
+
+        </article>
+
             <!-- tarjeta de experiencia-->
             <article class="card card--experience">
                 <h2 class="card__title">Experiencia</h2>
@@ -662,55 +653,34 @@
                         <span class="project__tag">#Splunk</span>
                         <span class="project__tag">#Accessibility</span>
                     </div>
-        
+                
                     <h2 class="card__title">Fiserv</h2>
-        
+                
                     <p class="card__text">
-                        Responsable de la calidad en soluciones web y móviles del ecosistema <strong>Fiserv</strong>, abarcando
-                        productos como
-                        <em>Merchant Center</em> (web), <em>Club Fiserv</em> (iOS) y <em>PosNet App</em> (iOS). Ejecución de
-                        pruebas en entornos de
-                        <strong>QA y Producción</strong> con foco en estabilidad, confiabilidad y experiencia de usuario.
+                        Responsable de la calidad en soluciones web y móviles del ecosistema <strong>Fiserv</strong>
+                        (<em>Merchant Center</em>, <em>Club Fiserv</em>, <em>PosNet App</em>).
+                        Ejecución de pruebas en <strong>QA y Producción</strong> con foco en estabilidad, confiabilidad y UX.
                     </p>
-        
+                
                     <p class="card__text">
-                        Ejecución y gestión de pruebas <strong>Smoke, Sanity, Regresión, Stress, Performance y Load</strong>.
+                        <strong>Tipos de pruebas:</strong> Smoke, Sanity, Regresión, Stress, Performance y Load. <br>
+                        <strong>Automatización:</strong> Postman (colecciones, scripting avanzado, parametrización con CSV). <br>
+                        <strong>Gestión de pruebas:</strong> qTest (evidencias, reportes, trazabilidad).
                     </p>
+                
                     <p class="card__text">
-                        <strong>Gestión integral de issues:</strong> identificación, documentación y seguimiento hasta su
-                        resolución.
+                        <strong>Monitoreo y diagnósticos:</strong> Dynatrace, Splunk, logs y análisis de performance. <br>
+                        <strong>Bases de datos:</strong> SQL y MongoDB (validación y generación de datos de prueba).
                     </p>
+                
                     <p class="card__text">
-                        Automatización de regresiones con <strong>Postman</strong> (colecciones, scripting avanzado y
-                        parametrización con CSV).
+                        <strong>Pruebas de accesibilidad:</strong> ADA / JAWS. <br>
+                        <strong>Certificación de releases</strong> en QA y Producción. <br>
+                        <strong>Metodología:</strong> participación en ceremonias ágiles (Daily, Refinement, Sprint Review).
                     </p>
-                    <p class="card__text">
-                        Gestión y trazabilidad de pruebas en <strong>qTest</strong>, incluyendo evidencias y reportes de
-                        ejecución.
-                    </p>
-                    <p class="card__text">
-                        Monitoreo de performance con <strong>Dynatrace</strong>, análisis de logs en <strong>Splunk</strong> y
-                        diagnóstico de incidentes.
-                    </p>
-                    <p class="card__text">
-                        Validación y generación de datos de prueba con <strong>SQL</strong> y <strong>MongoDB</strong>.
-                    </p>
-                    <p class="card__text">
-                        <strong>Pruebas de accesibilidad</strong> bajo estándares ADA y validación de compatibilidad con
-                        <strong>JAWS</strong>.
-                    </p>
-                    <p class="card__text">
-                        Diseño, desarrollo y optimización de casos de prueba para nuevas funcionalidades y mantenimiento de
-                        regresiones existentes.
-                    </p>
-                    <p class="card__text">
-                        Validación y certificación de <strong>releases</strong> en QA y Producción.
-                    </p>
-                    <p class="card__text">
-                        Participación en ceremonias ágiles (<em>Daily, Refinement, Sprint Review</em>).
-                    </p>
+                
                 </div>
-            </article>
+                </article>
         
             <!-- HUENEI / ICBC -->
             <article class="card card--project2" id="huenei-icbc">
@@ -732,26 +702,28 @@
                     <h2 class="card__title">Huenei – Banco ICBC</h2>
         
                     <p class="card__text">
-                        QA para aplicaciones bancarias con foco en <strong>mainframe</strong> y regresiones de
-                        <strong>front</strong>.
-                        Gestión de issues y trazabilidad en <strong>Jira</strong>. Validación de datos con <strong>Oracle SQL
-                            Developer</strong>.
+                        QA para aplicaciones bancarias con foco en mainframe, regresiones de front web y validación de integraciones
+                        críticas.
+                        Gestión de issues y trazabilidad en Jira y Azure DevOps, soporte en releases e interacción constante con equipos
+                        ágiles para asegurar calidad y cumplimiento regulatorio en un entorno de alta exigencia.
                     </p>
-        
-                    <p class="card__text">
-                        Pruebas de APIs con <strong>Postman</strong> e <strong>Insomnia</strong>. Participación en ceremonias
-                        ágiles y soporte a releases.
-                    </p>
-        
                     <details class="more">
                         <summary>Leer más</summary>
                         <div class="more__content">
-                            <p class="card__text">Ejecución de baterías de <strong>regresión</strong> sobre front web y
-                                validaciones contra servicios internos.</p>
-                            <p class="card__text">Creación/gestión de usuarios de prueba y datos semilla para escenarios
-                                funcionales.</p>
-                            <p class="card__text">Apoyo a integraciones con sistemas legados y validaciones en
-                                <strong>host</strong>.</p>
+                            <p class="card__text">Diseño, ejecución y optimización de casos de prueba para validar nuevas funcionalidades y
+                                regresiones.
+                                Registro, investigación y documentación de defectos en Office 365, Azure DevOps y Jira, con trazabilidad
+                                end-to-end.
+                                Validación y certificación de implementaciones en entornos de prueba y producción, asegurando precisión de datos
+                                y cumplimiento normativo.
+                                Pruebas de APIs y servicios internos con Postman e Insomnia.
+                                Validación de datos con Oracle SQL Developer, creación y administración de usuarios de prueba y datos semilla
+                                para escenarios funcionales.
+                                Apoyo en integraciones con sistemas legados y validaciones en host (mainframe).
+                                Gestión de repositorios de código en GitHub, GitLab y AWS para soporte de pruebas automatizadas y control de
+                                versiones.
+                                Participación en ceremonias ágiles (planning, refinamiento, retro) y acompañamiento en deploys y controles de
+                                calidad de releases.</p>
                         </div>
                     </details>
                 </div>
@@ -764,23 +736,36 @@
                         loading="lazy">
                 </div>
         
-                <div class="project">
+                <div class="project">     
+                    <div class="project__tags">
+                        <span class="project__tag">#QA</span>
+                        <span class="project__tag">#Automation</span>
+                        <span class="project__tag">#SQL</span>
+                        <span class="project__tag">#Jira</span>
+                        <span class="project__tag">#Office365</span>
+                        <span class="project__tag">#Jenkins</span>
+                        <span class="project__tag">#EndToEnd</span>
+                        <span class="project__tag">#Insurance</span>
+                    </div>
                     <h2 class="card__title">Vates – Thomson Reuters / Galicia Seguros</h2>
         
                     <p class="card__text">
-                        QA para el sector asegurador: diseño, ejecución y automatización de pruebas funcionales, de rendimiento
+                        QA para el sector asegurador con foco en diseño, ejecución y automatización de pruebas funcionales, de rendimiento
                         y seguridad.
-                        Trabajo cercano con desarrollo y stakeholders para asegurar cumplimiento regulatorio y de negocio.
+                        Colaboración directa con equipos de desarrollo y stakeholders para asegurar el cumplimiento regulatorio y de negocio
+                        en un entorno ágil.
                     </p>
         
                     <details class="more">
                         <summary>Leer más</summary>
                         <div class="more__content">
-                            <p class="card__text">Casos de prueba end-to-end; seguimiento de incidentes con Office 365 y Jira.
+                            <p class="card__text">Desarrollo de casos de prueba end-to-end para validar características críticas del software.
+                                Seguimiento y resolución de incidentes mediante Office 365 y Jira Software.
+                                Identificación y documentación de defectos, con trazabilidad completa hasta su resolución.
+                                Validación y certificación de implementaciones de software, garantizando precisión y cumplimiento normativo.
+                                Monitoreo de historias de usuario y validación de funcionalidades en ambientes de demostración.
+                                Soporte en despliegues de prueba y producción, con integración y automatización a través de Jenkins..
                             </p>
-                            <p class="card__text">Validación y certificación de implementaciones; monitoreo de historias en
-                                ambientes de demo.</p>
-                            <p class="card__text">Soporte a despliegues en prueba y producción; Jenkins.</p>
                         </div>
                     </details>
                 </div>
@@ -794,25 +779,37 @@
                 </div>
         
                 <div class="project">
+                    <div class="project__tags">         
+                        <span class="project__tag">#QA</span>
+                        <span class="project__tag">#Automation</span>
+                        <span class="project__tag">#SQL</span>
+                        <span class="project__tag">#AWS</span>
+                        <span class="project__tag">#Jira</span>
+                        <span class="project__tag">#MSSQL</span>
+                        <span class="project__tag">#Accessibility</span>
+                        <span class="project__tag">#Postman</span>
+                        <span class="project__tag">#Kibana</span>
+                        <span class="project__tag">#Kubernetes</span>
+                        <span class="project__tag">#Dynatrace</span>
+                        <span class="project__tag">#ITWallet</span>
+                    </div>
                     <h2 class="card__title">Tecnosoftware – Prisma Medios de Pago</h2>
         
                     <p class="card__text">
-                        QA para IT Wallet: pruebas funcionales, de integración y seguridad; automatización para mejorar
-                        eficiencia;
-                        gestión de incidencias y colaboración con equipos de negocio y desarrollo.
+                        QA para IT Wallet, con foco en pruebas funcionales, de integración y seguridad, así como en la automatización para
+                        mejorar la eficiencia y la gestión de incidencias.
+                        Colaboración directa con equipos de negocio y desarrollo para garantizar calidad, escalabilidad y continuidad
+                        operativa.
                     </p>
         
                     <details class="more">
                         <summary>Leer más</summary>
                         <div class="more__content">
-                            <p class="card__text">Administración de servicios en <strong>AWS</strong> y gestión de proyectos en
-                                <strong>Jira</strong>.</p>
-                            <p class="card__text">Diseño/ejecución de pruebas (exploratorias y regresión) manuales y
-                                automatizadas.</p>
-                            <p class="card__text">Gestión de bases de datos <strong>MS SQL</strong> (DBeaver, Toad) y emulación
-                                de APIs con <strong>Postman</strong>.</p>
-                            <p class="card__text">Monitoreo con <strong>Kibana</strong>, <strong>Kubernetes Dashboard</strong> y
-                                <strong>Dynatrace</strong>.</p>
+                            <p class="card__text">Administración y despliegue de servicios en AWS; gestión de proyectos y trazabilidad en
+                                Jira.
+                                Diseño y ejecución de pruebas manuales y automatizadas (exploratorias y de regresión).
+                                Gestión y validación de datos en MS SQL (DBeaver, Toad) y emulación de APIs con Postman.
+                                Monitoreo de aplicaciones y servicios con Kibana, Kubernetes Dashboard y Dynatrace.</p>
                         </div>
                     </details>
                 </div>
@@ -825,21 +822,38 @@
                 </div>
         
                 <div class="project">
+                    <div class="project__tags"> 
+                        <span class="project__tag">#QA</span>
+                        <span class="project__tag">#Integration</span>
+                        <span class="project__tag">#SQL</span>
+                        <span class="project__tag">#Unix</span>
+                        <span class="project__tag">#HPALM</span>
+                        <span class="project__tag">#ControlM </span>
+                        <span class="project__tag">#SOAPUI</span>
+                        <span class="project__tag">#Salesforce</span>
+                        <span class="project__tag">#Telecom</span>
+                    </div>
                     <h2 class="card__title">Atos Argentina – Telecom</h2>
         
                     <p class="card__text">
-                        QA de integración durante la fusión de Fibercorp, Cablevisión y Fibertel (Telecom Argentina):
-                        análisis de requisitos, diseño/ejecución de pruebas de integración y validación de interoperabilidad.
+                        QA de integración durante la fusión de Fibercorp, Cablevisión y Fibertel (Telecom Argentina), con foco en análisis
+                        de requisitos, diseño y ejecución de pruebas de integración y validación de interoperabilidad entre sistemas
+                        críticos.
+                        Participación en proyectos de gran escala que involucraron migración de CRM, servidores y líneas operativas,
+                        asegurando continuidad de negocio y estabilidad de la plataforma de ventas.
                     </p>
         
                     <details class="more">
                         <summary>Leer más</summary>
                         <div class="more__content">
-                            <p class="card__text">Gestión de sistemas Unix (Putty, MobaXterm) y orquestación con BMC Control-M.
+                            <p class="card__text">Ejecución de pruebas de front de Salesforce (ventas de celulares y accesorios) y validación de
+                                procesos comerciales.
+                                Gestión de sistemas Unix (Putty, MobaXterm) para comandos de operación y migración entre servidores.
+                                Automatización de tareas críticas con BMC Control-M, reduciendo procesos de 2 días a horas de ejecución.
+                                Validación de APIs y servicios mediante SOAP UI.
+                                Revisión de documentación y trazabilidad de pruebas con HP ALM.
+                                Acompañamiento en controles de cambio nocturnos, migraciones complejas y resolución de issues en tiempo real.
                             </p>
-                            <p class="card__text">Revisión de documentación y seguimiento en HP ALM.</p>
-                            <p class="card__text">Acompañamiento a migraciones, resolución de issues y aseguramiento de
-                                continuidad operativa.</p>
                         </div>
                     </details>
                 </div>
