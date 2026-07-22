@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <title>Proyectos</title>
@@ -7,41 +7,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="css/stylesWeb.css">
+        <link rel="stylesheet" href="css/theme.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" type='text/css'>
         <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
     </head>
-    <body class="dark">
+    <body>
         <header class="header">
-            <!-- Contenedor de switches (modo oscuro y colores) -->
+            <!-- Control de tema -->
             <nav class="switches">
-                <!-- Toggle de tema -->
-                <div id="toggle-theme" class="toggle-theme" role="button" aria-label="Cambiar tema">
-                    <img id="toggle-icon" src="assets/icons/moon.svg" alt="Icono de tema oscuro" class="toggle-theme__icon" />
-                    <p id="toggle-text" class="toggle-theme__text"></p>
-                </div>
+                <button id="toggle-theme" class="toggle-theme" type="button" aria-label="Activar modo oscuro">
+                    <span id="toggle-icon" class="toggle-theme__icon" aria-hidden="true"></span>
+                </button>
             </nav>
         
             
-            </div>
             <!-- Menu bar -->
-            <div class="menu__bar">
+            <nav class="menu__bar" aria-label="Navegación principal">
                 <ul class="navigation">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="projects.html">Proyectos</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
-            </div>
+            </nav>
  
-            <!-- Contenedor de selección de colores -->
-            <div id="toggle-colors" class="colors" aria-label="Seleccionar color de tema">
-                <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue" aria-label="Color Azul"></div>
-                <div data-color="hsl(150, 84%, 56%)" class="colors__item colors__item--green" aria-label="Color Verde"></div>
-                <div data-color="hsl(276, 84%, 56%)" class="colors__item colors__item--purple" aria-label="Color Púrpura"></div>
-                <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange" aria-label="Color Naranja"></div>
-            </div>
         </header>
+        <main>
         <section class="web-projects-section">
             <h1>Proyectos</h1>
             <p>
@@ -78,12 +70,12 @@
                                     Diseñada con una paleta de colores suaves y un diseño responsivo, la aplicación ofrece una experiencia visual
                                     agradable..
                                 </span>
-                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
+                            </p>
                                 <div class="buttons">
                                     <a href="https://hyliard.github.io/Cifradorcesar.github.io/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
                                     <a href="https://github.com/Hyliard/Cifradorcesar.github.io" target="_blank" rel="noopener" class="button button--ghost">Code</a>
                                 </div>
-                            </p>
                         </div>                        
                     </article>
                     <article>            
@@ -102,7 +94,7 @@
                                 <span class="more-text" style="display: none;">
                                     rio fluida y rápida. Ideal para cálculos rápidos y cotidianos..
                                 </span>
-                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
                             </p>
                             <div class="buttons">
                                     <a href="https://hyliard.github.io/CalculadoraResponsiva/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
@@ -127,7 +119,7 @@
                             decifrador funciona en tiempo real, mostrando los resultados instantáneamente y adaptándose a diferentes dispositivos
                             con un diseño responsivo.
                                 </span>
-                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
                             </p>
                             <div class="buttons">
                                 <a href="https://hyliard.github.io/Decifrador-Cesar/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
@@ -151,7 +143,7 @@
                                 <span class="more-text" style="display: none;">
                                     Además, la aplicación incluye una función de copiar la contraseña directamente al portapapeles
                                 </span>
-                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
                             </p>
                             <div class="buttons">
                                 <a href="https://hyliard.github.io/PassGenerator/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
@@ -179,7 +171,7 @@
                                     ◉ Generar estadísticas de clicks
                                     ◉ Crear URLs personalizadas
                                 </span>
-                                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                                <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
                             </p>
                             <div class="buttons">
                                 <a href="https://hyliard.github.io/AcortadorURL/" target="_blank" rel="noopener" class="button button--primary">Demo</a>
@@ -206,6 +198,7 @@
                 </div>
             </div>
         </div>
+        </main>
         <div class="container-footer">
             <footer>
                 <!-- Logo del pie de página -->
@@ -221,7 +214,7 @@
                   <a href="https://github.com/Hyliard" target="_blank" rel="noopener" aria-label="GitHub de Hyliard">
                     <i class="fab fa-github icon-redes"></i>
                   </a>
-                  <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Twitch de Hyliard">
+                  <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="WhatsApp de Luis Gerardo Martínez">
                     <i class="fab fa-whatsapp icon icon-redes"></i>
                 </a>
                 </div>
@@ -230,7 +223,7 @@
                 <hr />
                 
                 <!-- Derechos de autor -->
-                <p>© 2025 Hyliard. Todos los derechos reservados.</p>
+                <p>© 2026 Hyliard. Todos los derechos reservados.</p>
                 
                 <!-- Nombre de la persona -->
                 <h4>Luis Gerardo Martínez Hernández</h4>

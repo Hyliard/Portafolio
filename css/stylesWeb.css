@@ -1,10 +1,4 @@
 :root {
-    --primary: #DD946F ;
-    --secondary: #261E5A;
-    --primary-color: hsl(214, 84%, 56%);
-    --text-color: hsl(0, 0%, 31%);
-    --bg-color: hsl(0, 0%, 90%);
-    --bg-card-color: hsl(0, 0%, 98%);
     --border-radius: 0.4em;
     --transition: color 0.1s, background-color 0.2s ease-in-out;
 }
@@ -34,12 +28,6 @@ body {
     font-size: 16px;
 }
 
-body.dark {
-    --text-color: hsl(0, 0%, 83%);
-    --bg-color: hsl(0, 0%, 15%);
-    --bg-card-color: hsl(0, 0%, 20%);
-    
-}
 /* Media query para pantallas pequeñas (como móviles) */
 @media (max-width: 768px) {
     body {
@@ -112,44 +100,20 @@ body.dark {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+}
+
+.toggle-theme:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .toggle-theme__icon {
     margin-right: 0.5em;
     width: 20px;
-}
-
-.toggle-theme__text {
-    font-size: 0.8rem;
-}
-
-.colors {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    width: 100px;
-}
-
-.colors__item {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--text-color);
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.colors__item--blue { 
-    --primary-color: hsl(214, 84%, 56%); 
-}
-.colors__item--green { 
-    --primary-color: hsl(150, 84%, 56%); 
-}
-.colors__item--purple { 
-    --primary-color: hsl(276, 84%, 56%); 
-}
-.colors__item--orange { 
-    --primary-color: hsl(46, 84%, 56%); 
 }
 
 .title {
@@ -167,9 +131,9 @@ body.dark {
   padding: 40px;
   background: var(--bg-card-color);
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 30px var(--shadow-soft);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  color: var(--text-color);
 }
 
 .web-projects-section h1 {
@@ -243,7 +207,7 @@ body.dark {
     padding: 1em;
     background-color: var(--bg-card-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px var(--shadow-soft);
     transition: background-color 0.3s;
 }
 
@@ -251,28 +215,28 @@ body.dark {
 .skills__bar {
     height: 8px;
     border-radius: 5px;
-    background-color: #ddd;
+    background-color: var(--border-color);
     transition: width 0.3s ease;
 }
 
 .skills__bar--30 {
     width: 30%;
-    background-color: #4CAF50;
+    background-color: var(--success-color);
 }
 
 .skills__bar--40 {
     width: 40%;
-    background-color: #2196F3;
+    background-color: var(--primary-color);
 }
 
 .skills__bar--50 {
     width: 50%;
-    background-color: #FF9800;
+    background-color: var(--accent-color);
 }
 
 .skills__bar--70 {
     width: 70%;
-    background-color: #f44336;
+    background-color: var(--danger-color);
 }
 
 
@@ -302,7 +266,7 @@ body.dark {
 
 /* --- Artículos (tarjetas) --- */
 article {
-    background-color: var(--card-bg-color);
+    background-color: var(--bg-card-color);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px var(--shadow-color);
     overflow: hidden;
@@ -353,11 +317,15 @@ p {
     display: none;
     margin-top: 10px;
     font-size: 0.95em;
-    color: hsl(0, 0%, 50%);
+    color: var(--secondary-text-color);
 }
 
 /* --- Enlace "Leer más" --- */
 .read-more {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
@@ -366,7 +334,7 @@ p {
 }
 
 .read-more:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 /* --- Botones dentro de los artículos --- */
@@ -387,11 +355,11 @@ p {
 
 .button--primary {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--on-primary-color);
 }
 
 .button--primary:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
 }
 
 .button--ghost {
@@ -402,7 +370,7 @@ p {
 
 .button--ghost:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--on-primary-color);
 }
 
 /* --- Responsividad --- */
@@ -449,7 +417,6 @@ p {
     bottom: 0;
 
   }
-  
   .container-footer footer {
     max-width: 1200px;
     margin: auto;
@@ -481,41 +448,41 @@ p {
     margin-top: 20px;
   }
   
-  .container-footer footer .redes-footer .icon-redes {
+.container-footer footer .redes-footer .icon-redes {
     font-size: 30px;
     margin: 20px;
-    background: #efefef;
+    background: var(--bg-card-color);
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    color: #a2a2a2;
+    color: var(--secondary-text-color);
   }
   
   footer .redes-footer .fa-linkedin-in:hover {
-    background: #0e76a8;
-    color: #fff;
+    background: var(--linkedin-color);
+    color: var(--on-brand-color);
   }
   
   footer .redes-footer .fa-github:hover {
-    background: #000;
-    color: #fff;
+    background: var(--github-color);
+    color: var(--on-brand-color);
   }
   
   footer .redes-footer .fa-whatsapp:hover {
-    background: #25d366;
-    color: #fff;
+    background: var(--whatsapp-color);
+    color: var(--on-brand-color);
   }
   
-  .container-footer footer hr {
-    border: 1px solid #a2a2a2;
+.container-footer footer hr {
+    border: 1px solid var(--border-color);
   }
   
-  .container-footer h4 {
+.container-footer h4 {
     text-align: center;
-    color: #a2a2a2;
+    color: var(--secondary-text-color);
     margin-top: 20px;
   }
 
@@ -525,4 +492,3 @@ p {
   .icon-redes:hover {
     transform: scale(1.2);
   }
-  
