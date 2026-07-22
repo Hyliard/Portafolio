@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <title>Proyectos</title>
@@ -8,47 +8,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="css/stylesiOS.css">
+        <link rel="stylesheet" href="css/theme.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" type='text/css'>
         <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
     </head>
     
-    <body class="dark">
+    <body>
         <header class="header">
-            <!-- Contenedor de switches (modo oscuro y colores) -->
+            <!-- Control de tema -->
             <nav class="switches">
-                <!-- Toggle de tema -->
-                <div id="toggle-theme" class="toggle-theme" role="button" aria-label="Cambiar tema">
-                    <img id="toggle-icon" src="assets/icons/moon.svg" alt="Icono de tema oscuro"
-                        class="toggle-theme__icon" />
-                    <p id="toggle-text" class="toggle-theme__text"></p>
-                </div>
+                <button id="toggle-theme" class="toggle-theme" type="button" aria-label="Activar modo oscuro">
+                    <span id="toggle-icon" class="toggle-theme__icon" aria-hidden="true"></span>
+                </button>
             </nav>
     
     
-            </div>
             <!-- Menu bar -->
-            <div class="menu__bar">
+            <nav class="menu__bar" aria-label="Navegación principal">
                 <ul class="navigation">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="projects.html">Proyectos</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
-            </div>
+            </nav>
     
-            <!-- Contenedor de selección de colores -->
-            <div id="toggle-colors" class="colors" aria-label="Seleccionar color de tema">
-                <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue" aria-label="Color Azul"></div>
-                <div data-color="hsl(150, 84%, 56%)" class="colors__item colors__item--green" aria-label="Color Verde">
-                </div>
-                <div data-color="hsl(276, 84%, 56%)" class="colors__item colors__item--purple" aria-label="Color Púrpura">
-                </div>
-                <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange" aria-label="Color Naranja">
-                </div>
-            </div>
         </header>
-        <div class="background">
+        <main class="background">
             <div class="centering">
                 <div class="articles">
                     <section class="ios-projects-section">
@@ -66,18 +53,18 @@
                         </figure>
                         <div class="article-preview">
                             <h2>PassGenerator</h2>
-                            <a>
+                            <p>
                                 PassGenerator es una aplicación práctica y segura que te permite generar contraseñas robustas en segundos. <br>
                                 Personaliza la longitud, incluye símbolos, números y letras mayúsculas para crear claves fuertes que protejan tus
                                 cuentas. <br>
                                 Ideal para mejorar tu seguridad digital, esta app ofrece una experiencia simple, eficiente y confiable para
                                 gestionar tu privacidad.
-                            
-                                <a href="#"></a>
+                            </p>
                             <div class="buttons">
                                 <a href="https://github.com/Hyliard/passGeneratoriOS" target="_blank" rel="noopener"
                                     class="button button--ghost">Code
                                 </a>
+                            </div>
                         </div>
                     </article>
                     <article>
@@ -86,19 +73,19 @@
                         </figure>
                         <div class="article-preview">
                             <h2>IMC Calculator</h2>
-                            <a>
+                            <p>
                                 IMC Calculator es una aplicación intuitiva y fácil de usar que te permite calcular tu índice
                                 de masa corporal de manera
                                 rápida y precisa. <br> Ingresa tus datos y obtén información sobre tu peso ideal y estado de
                                 salud. <br>Con una interfaz
                                 atractiva y personalizable, esta app es la herramienta perfecta para monitorear tu bienestar físico y alcanzar tus
                                 objetivos de salud.
-                            
-                            <a href="#"></a>
+                            </p>
                             <div class="buttons">
                                 <a href="https://github.com/Hyliard/AppIMCiOS" target="_blank" rel="noopener"
                                     class="button button--ghost">Code
                                 </a>
+                            </div>
                         </div>
                     </article>
                     <article>
@@ -107,7 +94,7 @@
                         </figure>
                         <div class="article-preview">
                             <h2>Buscador de Super Heroes</h2>
-                            <a>
+                            <p>
                                 Superhero Searcher es una aplicación innovadora que te permite encontrar y explorar
                                 información detallada sobre tus
                                 superhéroes favoritos. <br>Utilizando una potente API, la app ofrece búsquedas rápidas y
@@ -116,12 +103,11 @@
                                 moderna y fácil de usar,
                                 Superhero Searcher es la herramienta definitiva para todos los fanáticos de los
                                 superhéroes.
-                            <a href="#"></a>
+                            </p>
                             <div class="buttons">
                                 <a href="https://github.com/Hyliard/SuperheroSearch" target="_blank" rel="noopener"
                                     class="button button--ghost">Code</a>
                             </div>
-                            </p>
                         </div>
                     </article>
                     <article>
@@ -130,7 +116,7 @@
                         </figure>
                         <div class="article-preview">
                             <h2>Lista de Tareas </h2>
-                            <a>
+                            <p>
                                 sus tareas diarias de manera eficiente. 
                                 <br>Con una interfaz limpia y fácil de usar, permite agregar nuevas tareas, editarlas, 
                                 marcarlas como completadas o eliminarlas.<br> Los usuarios pueden organizar sus actividades,
@@ -140,19 +126,17 @@
                                 asegurando que no pierdas tu progreso. <br>
                                 Es una herramienta ideal para mantenerte organizado, <br>
                                 optimizar tu tiempo y mejorar la productividad tanto en el trabajo como en la vida diaria. .
-                                
-                            <a href="#"></a>
+                            </p>
                             <div class="buttons">
                                 <a href="https://github.com/Hyliard/productividad" target="_blank" rel="noopener"
                                     class="button button--ghost">Code</a>
                             </div>
-                            </p>
                         </div>
     
                     </article>
                 </div>
             </div>
-        </div>
+        </main>
     
         <div class="container-footer">
             <footer>
@@ -170,7 +154,7 @@
                     <a href="https://github.com/Hyliard" target="_blank" rel="noopener" aria-label="GitHub de Hyliard">
                         <i class="fab fa-github icon-redes"></i>
                     </a>
-                    <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Twitch de Hyliard">
+                    <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="WhatsApp de Luis Gerardo Martínez">
                         <i class="fab fa-whatsapp icon icon-redes"></i>
                     </a>
                 </div>
@@ -179,14 +163,11 @@
                 <hr />
     
                 <!-- Derechos de autor -->
-                <p>© 2025 Hyliard. Todos los derechos reservados.</p>
+                <p>© 2026 Hyliard. Todos los derechos reservados.</p>
     
                 <!-- Nombre de la persona -->
                 <h4>Luis Gerardo Martínez Hernández</h4>
-        </div>
-        </div>
-        </footer>
-        </div>
+            </footer>
         </div>
     
         <script src="js/scripts.js"></script>

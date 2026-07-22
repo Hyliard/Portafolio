@@ -1,8 +1,4 @@
 :root {
-    --primary-color: hsl(214, 84%, 56%);
-    --text-color: hsl(0, 0%, 31%);
-    --bg-color: hsl(0, 0%, 90%);
-    --bg-card-color: hsl(0, 0%, 98%);
     --border-radius: 0.4em;
     --transition: color 0.1s, background-color 0.2s ease-in-out;
 
@@ -33,13 +29,6 @@ body {
     font-size: 16px;
 }
 
-body.dark {
-    --text-color: hsl(0, 0%, 83%);
-    --bg-color: hsl(0, 0%, 15%);
-    --bg-card-color: hsl(0, 0%, 20%);
-
-}
-
 /* Media query para pantallas pequeñas (como móviles) */
 @media (max-width: 768px) {
     body {
@@ -57,8 +46,8 @@ body.dark {
 
 /*fifiserv*/
 .experience-item {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
+  background-color: var(--bg-card-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -67,7 +56,7 @@ body.dark {
 
 .experience-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px var(--shadow-strong);
 }
 
 .experience-header {
@@ -79,28 +68,28 @@ body.dark {
 .experience-header h3 {
   margin: 0;
   font-size: 1.4em;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .experience-header .company {
   font-weight: bold;
-  color: #4ea1f3;
+  color: var(--primary-color);
   margin-top: 5px;
 }
 
 .experience-header .date {
   font-size: 0.9em;
-  color: #aaaaaa;
+  color: var(--secondary-text-color);
 }
 
 .experience-item p {
-  color: #dddddd;
+  color: var(--text-color);
   line-height: 1.5;
 }
 
 .experience-item ul {
   margin: 10px 0 0 20px;
-  color: #cccccc;
+  color: var(--secondary-text-color);
 }
 
 .experience-item li {
@@ -161,47 +150,20 @@ body.dark {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+}
+
+.toggle-theme:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .toggle-theme__icon {
     margin-right: 0.5em;
     width: 20px;
-}
-
-.toggle-theme__text {
-    font-size: 0.8rem;
-}
-
-.colors {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    width: 100px;
-}
-
-.colors__item {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--text-color);
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.colors__item--blue {
-    --primary-color: hsl(214, 84%, 56%);
-}
-
-.colors__item--green {
-    --primary-color: hsl(150, 84%, 56%);
-}
-
-.colors__item--purple {
-    --primary-color: hsl(276, 84%, 56%);
-}
-
-.colors__item--orange {
-    --primary-color: hsl(46, 84%, 56%);
 }
 
 .title {
@@ -231,7 +193,7 @@ body.dark {
     justify-content: center;
     align-items: center;
     border: 3px solid var(--primary-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--shadow-soft);
     margin: 0 auto;
 }
 
@@ -283,9 +245,9 @@ body.dark {
     padding: 1em;
     background-color: var(--bg-card-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, .18), 0 1px 2px rgba(0, 0, 0, .12);
+    box-shadow: 0 6px 14px var(--shadow-medium), 0 1px 2px var(--shadow-soft);
     transition: background-color 0.3s;
-    border: 1px solid rgba(255, 255, 255, .06);
+    border: 1px solid var(--border-color);
     background-clip: padding-box;
     display: block;
     width: 100%;
@@ -298,6 +260,10 @@ body.dark {
 }
 
 .read-more {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
     color: var(--primary-color);
     text-decoration: underline;
     cursor: pointer;
@@ -309,28 +275,28 @@ body.dark {
 .skills__bar {
     height: 8px;
     border-radius: 5px;
-    background-color: #ddd;
+    background-color: var(--border-color);
     transition: width 0.3s ease;
 }
 
 .skills__bar--30 {
     width: 30%;
-    background-color: #4CAF50;
+    background-color: var(--success-color);
 }
 
 .skills__bar--40 {
     width: 40%;
-    background-color: #2196F3;
+    background-color: var(--primary-color);
 }
 
 .skills__bar--50 {
     width: 50%;
-    background-color: #FF9800;
+    background-color: var(--accent-color);
 }
 
 .skills__bar--70 {
     width: 70%;
-    background-color: #f44336;
+    background-color: var(--danger-color);
 }
 
 
@@ -389,12 +355,6 @@ body.dark {
     color: var(--primary-color);
 }
 
-/* Estilos para el selector de color */
-.colors {
-    display: flex;
-    gap: 0.5em;
-}
-
 /* Ajuste para las imágenes de las banderas */
 .flags__item img {
     width: 30px;
@@ -411,10 +371,6 @@ body.dark {
 .toggle-theme__icon {
     width: 20px;
     height: auto;
-}
-
-.toggle-theme__text {
-    font-size: 1rem;
 }
 
 .card__header {
@@ -467,7 +423,7 @@ body.dark {
     position: relative;
     width: 100px;
     height: 8px;
-    background-color: #888;
+    background-color: var(--secondary-text-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     max-width: 175px;
@@ -520,6 +476,104 @@ body.dark {
 
 .skills__bar--100::after {
     width: 90%;
+}
+
+/* Skills & Tools */
+.skills-tools {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.skills-tools > .card__title {
+    margin-bottom: 0.15rem;
+}
+
+.skill-group {
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+}
+
+.skill-group--primary {
+    border-left: 4px solid var(--primary-color);
+}
+
+.skill-group--growth {
+    border-left: 4px solid var(--accent-color);
+}
+
+.skill-group__title {
+    margin: 0 0 0.65rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.skill-group--primary .skill-group__title {
+    color: var(--primary-color);
+}
+
+.skill-group--growth .skill-group__title {
+    color: var(--accent-color);
+}
+
+.skill-group__title span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--secondary-text-color);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.skill-tag {
+    display: inline-flex;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: var(--bg-card-color);
+    color: var(--text-color);
+    font-size: 0.75rem;
+    line-height: 1.35;
+}
+
+.expertise-card--primary {
+    border-top: 3px solid var(--primary-color);
+}
+
+.expertise-card--secondary {
+    border-top: 2px solid var(--border-color);
+}
+
+.capability-text {
+    margin: 0;
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.professional-strengths {
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.experience-badge {
+    width: fit-content;
+    margin: 0 0 0.75rem;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: var(--bg-color);
+    color: var(--secondary-text-color);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 .experience {
@@ -592,7 +646,7 @@ body.dark {
     padding: 0.4em 0.8em;
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
-    color: var(--bg-color);
+    color: var(--on-primary-color);
 }
 
 .buttons {
@@ -619,7 +673,7 @@ body.dark {
 
 .button--primary {
     background-color: var(--primary-color);
-    color: var(--bg-color);
+    color: var(--on-primary-color);
 }
 
 .button--ghost {
@@ -750,38 +804,38 @@ footer {
 .container-footer footer .redes-footer .icon-redes {
     font-size: 30px;
     margin: 20px;
-    background: #efefef;
+    background: var(--bg-card-color);
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    color: #a2a2a2;
+    color: var(--secondary-text-color);
 }
 
 footer .redes-footer .fa-linkedin-in:hover {
-    background: #0e76a8;
-    color: #fff;
+    background: var(--linkedin-color);
+    color: var(--on-primary-color);
 }
 
 footer .redes-footer .fa-github:hover {
-    background: #000;
-    color: #fff;
+    background: var(--github-color);
+    color: var(--on-brand-color);
 }
 
 footer .redes-footer .fa-whatsapp:hover {
-    background: #25d366;
-    color: #fff;
+    background: var(--whatsapp-color);
+    color: var(--on-brand-color);
   }
 
 .container-footer footer hr {
-    border: 1px solid #a2a2a2;
+    border: 1px solid var(--border-color);
 }
 
 .container-footer h4 {
     text-align: center;
-    color: #a2a2a2;
+    color: var(--secondary-text-color);
     margin-top: 20px;
 }
 
@@ -799,7 +853,7 @@ section.column--fullwidth {
     width: 100%;
     padding: 20px 0;
     background-color: var(--bg-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--shadow-soft);
 }
 
 /* Tarjetas dentro de la columna de ancho completo */
@@ -831,7 +885,7 @@ section.column--fullwidth {
     /* Hacer el título más destacado */
     text-align: center;
     /* Asegura que el texto esté centrado */
-    color: var(--link-color);
+    color: var(--primary-color);
     /* Color oscuro para buen contraste */
 }
 
@@ -881,7 +935,7 @@ section.column--fullwidth {
     text-align: center;
 }
 
-.contact-section h2 {
+.contact-section h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -912,7 +966,7 @@ section.column--fullwidth {
     background-color: var(--bg-card-color);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--shadow-soft);
     text-align: center;
     width: 100%;
     max-width: 300px;
@@ -921,7 +975,7 @@ section.column--fullwidth {
 
 .contact-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 25px var(--shadow-medium);
 }
 
 .contact-card h3 {
@@ -940,12 +994,12 @@ section.column--fullwidth {
 /* Estilo de los iconos */
 .contact-icon {
     font-size: 2.5rem;
-    color: var(--link-color);
+    color: var(--primary-color);
     transition: color 0.3s ease;
 }
 
 .contact-card:hover .contact-icon {
-    color: #007bb5;
+    color: var(--accent-color);
 }
 
 /* Estilo responsivo para móviles */

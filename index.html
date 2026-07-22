@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/theme.css" />
 
   <!-- ✅ Open Graph para previews (LinkedIn, WhatsApp, etc.) -->
   <meta property="og:title" content="Luis Gerardo Martínez Hernández - Portafolio" />
@@ -34,32 +35,18 @@
   <meta name="author" content="Luis Gerardo Martínez Hernández" />
 </head>
 
-<body class="dark">
+<body>
     <header class="header">
-        <!-- Contenedor de switches (modo oscuro y colores) -->
-        <nav class="switches">
-            <!-- Toggle de tema -->
-            <div id="toggle-theme" class="toggle-theme" role="button" aria-label="Cambiar tema">
-                <img id="toggle-icon" src="assets/icons/moon.svg" alt="Icono de tema oscuro"
-                    class="toggle-theme__icon" />
-                <p id="toggle-text" class="toggle-theme__text"></p>
-            </div>
+        <!-- Control de tema y navegación -->
+        <nav class="switches" aria-label="Navegación principal">
+            <button id="toggle-theme" class="toggle-theme" type="button" aria-label="Activar modo oscuro">
+                <span id="toggle-icon" class="toggle-theme__icon" aria-hidden="true"></span>
+            </button>
             <ul class="navigation">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="projects.html">Proyectos</a></li>
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
-            <!-- Contenedor de selección de colores -->
-            <div id="toggle-colors" class="colors" aria-label="Seleccionar color de tema">
-                <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue" aria-label="Color Azul">
-                </div>
-                <div data-color="hsl(150, 84%, 56%)" class="colors__item colors__item--green" aria-label="Color Verde">
-                </div>
-                <div data-color="hsl(276, 84%, 56%)" class="colors__item colors__item--purple"
-                    aria-label="Color Púrpura"></div>
-                <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange"
-                    aria-label="Color Naranja"></div>
-            </div>
         </nav>
     </header>
     
@@ -72,7 +59,7 @@
                 <img src="assets/images/Profile.jpg" alt="Profile Picture" loading="lazy">
             </div>
             <div class="card__header">
-                <h2 class="card__title no-margin">Luis Gerardo Martínez</h2>
+                <h1 class="card__title no-margin">Luis Gerardo Martínez</h1>
                 <p class="card__subtitle" data-section="profile" data-value="title">
                     Ingeniero de Telecomunicaciones
                 </p>
@@ -171,7 +158,7 @@
                     experiencia divertida y enriquecedora.
                 
                 </span>
-                <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
                 
                 <div class="card__image-container">
                     <img src="assets/images/hobbie2.jpg" alt="Video Games" loading="lazy">
@@ -186,315 +173,141 @@
                         Cada partida es una nueva experiencia, y disfruto mucho tanto de los juegos en solitario como de los
                         multijugador.
                     </span>
-                    <a href="#" class="read-more" onclick="toggleText(event)">Leer más</a>
+                    <button type="button" class="read-more" onclick="toggleText(event)">Leer más</button>
                 </p>
             </article>
         </section>
         <!-- tarjeta de habilidades -->
         <section class="column column--right">
-            <!-- Front End Skills (extendido) -->
-            <article class="card">
-                <h2 class="card__title">Front End Skills</h2>
-                <div class="skills"></div>
-                <small>Años de Experiencia</small>
-                <div class="skills__header">
-                    <span class="skills__start-level">1</span>
-                    <span class="skills__start-level">7</span>
-                </div>
-        
-                <div class="skills">
-                    <!-- Core -->
-                    <div class="skills__item">
-                        <p class="skills__tech">HTML</p>
-                        <div class="skills__bar skills__bar--40"></div>
+            <!-- Skills & Tools -->
+            <article class="card skills-tools">
+                <h2 class="card__title">Skills &amp; Tools</h2>
+
+                <section class="skill-group skill-group--primary" aria-labelledby="qa-engineering-title">
+                    <h3 id="qa-engineering-title" class="skill-group__title">QA Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Functional, Regression and Integration Testing</span>
+                        <span class="skill-tag">API Testing</span>
+                        <span class="skill-tag">Mobile Testing</span>
+                        <span class="skill-tag">SQL and Data Validation</span>
+                        <span class="skill-tag">Performance Testing</span>
+                        <span class="skill-tag">Accessibility Testing</span>
+                        <span class="skill-tag">Test Planning and Defect Management</span>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">CSS</p>
-                        <div class="skills__bar skills__bar--40"></div>
+                </section>
+
+                <section class="skill-group" aria-labelledby="testing-automation-title">
+                    <h3 id="testing-automation-title" class="skill-group__title">Testing &amp; Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Insomnia</span>
+                        <span class="skill-tag">qTest</span>
+                        <span class="skill-tag">Playwright con Python</span>
+                        <span class="skill-tag">Cypress</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">JMeter</span>
+                        <span class="skill-tag">XCTest y XCUITest</span>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">JavaScript</p>
-                        <div class="skills__bar skills__bar--30"></div>
+                </section>
+
+                <section class="skill-group" aria-labelledby="observability-delivery-title">
+                    <h3 id="observability-delivery-title" class="skill-group__title">Observability &amp; Delivery</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Dynatrace</span>
+                        <span class="skill-tag">Splunk</span>
+                        <span class="skill-tag">AWS CloudWatch</span>
+                        <span class="skill-tag">Harness</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitLab CI</span>
+                        <span class="skill-tag">Git y GitHub</span>
+                        <span class="skill-tag">Jira y ServiceNow</span>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">TypeScript</p>
-                        <div class="skills__bar skills__bar--20"></div>
+                </section>
+
+                <section class="skill-group skill-group--growth" aria-labelledby="ios-development-title">
+                    <h3 id="ios-development-title" class="skill-group__title">iOS Development <span>Área de crecimiento</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">SwiftUI</span>
+                        <span class="skill-tag">UIKit</span>
+                        <span class="skill-tag">SwiftData</span>
+                        <span class="skill-tag">XCTest/XCUITest</span>
+                        <span class="skill-tag">Xcode</span>
                     </div>
-        
-                    <!-- Frameworks / Librerías -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Angular 17</p>
-                        <div class="skills__bar skills__bar--30"></div>
+                </section>
+
+                <section class="skill-group" aria-labelledby="data-backend-title">
+                    <h3 id="data-backend-title" class="skill-group__title">Data &amp; Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Oracle SQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Docker</span>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">RxJS</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-        
-                    <!-- Estilos / UI -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Tailwind CSS</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Sass (SCSS)</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Responsive Design (RWD)</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Accesibilidad (WCAG/ARIA)</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-        
-                    <!-- Integración -->
-                    <div class="skills__item">
-                        <p class="skills__tech">APIs REST/JSON</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-        
-                    <!-- Testing -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Cypress</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Playwright</p>
-                        <div class="skills__bar skills__bar--10"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Jest</p>
-                        <div class="skills__bar skills__bar--10"></div>
-                    </div>
-        
-                    <!-- Tooling / DevOps -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Vite</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Git (branching, PRs)</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">GitHub Actions (CI/CD)</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-        
-                    <!-- iOS (relación con FE) -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Swift</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">SwiftUI</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                </div>
+                </section>
             </article>
 
-            <!-- Skills (QA + Tooling + DevOps) -->
-            <article class="card">
-                <h2 class="card__title">Skills</h2>
-                <small>Años de Experiencia</small>
-                <div class="skills__header">
-                    <span class="skills__start-level">1</span>
-                    <span class="skills__start-level">7</span>
-                </div>
-            
-                <!-- QA & Gestión -->
-                <h3 class="card__subtitle">QA & Gestión</h3>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">Jira, Azure DevOps</p>
-                        <div class="skills__bar skills__bar--80"></div>
+            <!-- QA Expertise -->
+            <article class="card skills-tools expertise-card expertise-card--primary">
+                <h2 class="card__title">QA Expertise</h2>
+
+                <section class="skill-group skill-group--primary">
+                    <h3 class="skill-group__title">Test Strategy &amp; Design</h3>
+                    <p class="capability-text">Planificación, criterios de aceptación y cobertura basada en riesgo.</p>
+                </section>
+                <section class="skill-group">
+                    <h3 class="skill-group__title">Functional &amp; Regression Testing</h3>
+                    <p class="capability-text">E2E, regresión, smoke, sanity e integración.</p>
+                </section>
+                <section class="skill-group">
+                    <h3 class="skill-group__title">API &amp; Data Validation</h3>
+                    <p class="capability-text">APIs REST, validación de contratos, SQL, datos y sistemas financieros.</p>
+                </section>
+                <section class="skill-group">
+                    <h3 class="skill-group__title">Mobile Quality</h3>
+                    <p class="capability-text">Pruebas iOS y Android, dispositivos reales, accesibilidad y experiencia de usuario.</p>
+                </section>
+                <section class="skill-group">
+                    <h3 class="skill-group__title">Performance &amp; Observability</h3>
+                    <p class="capability-text">Performance, análisis de logs, métricas y diagnóstico de incidentes.</p>
+                </section>
+                <section class="skill-group">
+                    <h3 class="skill-group__title">Release Validation</h3>
+                    <p class="capability-text">Certificación de releases, evidencias, trazabilidad y acompañamiento de despliegues.</p>
+                </section>
+
+                <section class="professional-strengths" aria-labelledby="professional-strengths-title">
+                    <h3 id="professional-strengths-title" class="skill-group__title">Professional Strengths</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Comunicación accionable</span>
+                        <span class="skill-tag">Colaboración cross-functional</span>
+                        <span class="skill-tag">Pensamiento analítico y priorización por riesgo</span>
+                        <span class="skill-tag">Ownership, aprendizaje continuo y mentoría</span>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">qTest (trazabilidad, evidencias)</p>
-                        <div class="skills__bar skills__bar--60"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">HP ALM / ALM QC</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Test Design (E2E, Regresión, Smoke/Sanity)</p>
-                        <div class="skills__bar skills__bar--70"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">BDD (Gherkin)</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                </div>
-            
-                <!-- Automatización & APIs -->
-                <h3 class="card__subtitle">Automatización & APIs</h3>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">Postman (colecciones, CSV, runners)</p>
-                        <div class="skills__bar skills__bar--70"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Cypress</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Playwright</p>
-                        <div class="skills__bar skills__bar--10"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">JMeter (performance básico)</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Python (scripting QA)</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                </div>
-            
-                <!-- Observabilidad & DevOps -->
-                <h3 class="card__subtitle">Observabilidad & DevOps</h3>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">Dynatrace</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Splunk / Kibana</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Docker</p>
-                        <div class="skills__bar skills__bar--60"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Kubernetes</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">GitHub / GitLab / Bitbucket</p>
-                        <div class="skills__bar skills__bar--60"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">CI/CD (GitHub Actions, Jenkins)</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">BMC Control-M</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                </div>
-            
-                <!-- Datos & Bases -->
-                <h3 class="card__subtitle">Datos & Bases</h3>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">SQL (queries/joins)</p>
-                        <div class="skills__bar skills__bar--60"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Oracle SQL Developer</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">MongoDB</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                </div>
-            
-                <!-- Soft Skills -->
-                <h3 class="card__title">Soft Skills</h3>
-                <p class="card__text"><strong>Comunicación:</strong> informes claros, evidencias reproducibles, feedback accionable.
-                </p>
-                <p class="card__text"><strong>Colaboración:</strong> trabajo cross-team con Dev, Producto y Negocio; participación
-                    en ágiles.</p>
-                <p class="card__text"><strong>Pensamiento analítico:</strong> priorización por riesgo, diagnóstico y propuesta de
-                    soluciones.</p>
-                <p class="card__text"><strong>Gestión del tiempo:</strong> foco en entregas, manejo de releases y multitarea.</p>
-                <p class="card__text no-margin"><strong>Aprendizaje continuo & mentoría:</strong> compartir buenas prácticas y
-                    elevar el estándar del equipo.</p>
+                </section>
             </article>
             
-            <!-- BackEnd Skills (mejorado) -->
-            <article class="card">
-                <h2 class="card__title">BackEnd Skills</h2>
-                <div class="skills"></div>
-                <small>Años de Experiencia</small>
-                <div class="skills__header">
-                    <span class="skills__start-level">1</span>
-                    <span class="skills__start-level">7</span>
-                </div>
-            
-                <div class="skills">
-                    <!-- Lenguajes / Runtime -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Node.js (TypeScript)</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Python (scripting)</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-            
-                    <!-- Frameworks / Arquitectura -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Express.js · Clean Architecture</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Prisma ORM</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-            
-                    <!-- APIs & Auth -->
-                    <div class="skills__item">
-                        <p class="skills__tech">REST APIs · OpenAPI/Swagger</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Auth: JWT / OAuth2 · Firebase Auth</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Postman / Insomnia (collections, envs)</p>
-                        <div class="skills__bar skills__bar--70"></div>
-                    </div>
-            
-                    <!-- Datos & Caching -->
-                    <div class="skills__item">
-                        <p class="skills__tech">PostgreSQL (SQL/joins)</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">MongoDB</p>
-                        <div class="skills__bar skills__bar--40"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Redis (caching básico)</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-            
-                    <!-- Infra / Observabilidad -->
-                    <div class="skills__item">
-                        <p class="skills__tech">Docker · Docker Compose</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">CI/CD (GitHub Actions)</p>
-                        <div class="skills__bar skills__bar--20"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Linux · Bash / PowerShell</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-            
-                    <!-- Performance -->
-                    <div class="skills__item">
-                        <p class="skills__tech">JMeter (performance básico)</p>
-                        <div class="skills__bar skills__bar--30"></div>
-                    </div>
+            <!-- Backend & Engineering Foundations -->
+            <article class="card skills-tools expertise-card expertise-card--secondary">
+                <h2 class="card__title">Backend &amp; Engineering Foundations</h2>
+                <p class="experience-badge">Experiencia práctica en proyectos</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">Prisma ORM</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">OpenAPI/Swagger</span>
+                    <span class="skill-tag">JWT Authentication</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Docker Compose</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Bash / PowerShell</span>
+                    <span class="skill-tag">Python scripting</span>
                 </div>
             </article>
             <article class="card">
@@ -539,7 +352,7 @@
                         <img src="assets/images/JMeter_00.png" alt="Apache JMeter" title="Apache JMeter" loading="lazy">
                         <img src="assets/images/Insomnia.webp" alt="Insomnia" title="Insomnia" loading="lazy">
                         <img src="assets/images/GHERKIN.jpeg" alt="Gherkin" title="Gherkin" loading="lazy">
-                        <img src="assets/images/qtest.png" alt="qTest" title="qTest" loading="lazy">
+                        <img src="assets/images/QTEST.png" alt="qTest" title="qTest" loading="lazy">
                 
                         <!-- Observabilidad & Logs -->
                         <img src="assets/images/Dynatrace.png" alt="Dynatrace" title="Dynatrace" loading="lazy">
@@ -551,7 +364,7 @@
                         <img src="assets/images/Typescript_logo.png" alt="TypeScript" title="TypeScript" loading="lazy">
                         <img src="assets/images/express-js.png" alt="Express.js" title="Express.js" loading="lazy">
                         <img src="assets/images/Prisma.png" alt="Prisma ORM" title="Prisma ORM" loading="lazy">
-                        <img src="assets/images/swagger.png" alt="OpenAPI / Swagger" title="OpenAPI / Swagger" loading="lazy">
+                        <img src="assets/images/Swagger.png" alt="OpenAPI / Swagger" title="OpenAPI / Swagger" loading="lazy">
                 
                         <!-- Datos & DB -->
                         <img src="assets/images/DBeaver.png" alt="DBeaver" title="DBeaver" loading="lazy">
@@ -581,7 +394,7 @@
                         <img src="assets/images/swift-15.svg" alt="Swift" title="Swift" loading="lazy">
                         <img src="assets/images/swiftui-96x96_2x.png" alt="SwiftUI" title="SwiftUI" loading="lazy">
                         <img src="assets/images/xcode.png" alt="Xcode" title="Xcode" loading="lazy">
-                        <img src="assets/images/testflight.png" alt="TestFlight" title="TestFlight" loading="lazy">
+                        <img src="assets/images/TestFlight.png" alt="TestFlight" title="TestFlight" loading="lazy">
                 
                         <!-- OS & Tools -->
                         <img src="assets/images/Tux.png" alt="Linux" title="Linux" loading="lazy">
@@ -594,7 +407,7 @@
                         <img src="assets/images/bitbucket.png" alt="Bitbucket" title="Bitbucket" loading="lazy">
                         <img src="assets/images/azuredevops.png" alt="Azure DevOps" title="Azure DevOps" loading="lazy">
                         <img src="assets/images/JIRA.jpeg" alt="Jira" title="Jira" loading="lazy">
-                        <img src="assets/images/firebase.png" alt="Firebase" title="Firebase" loading="lazy">
+                        <img src="assets/images/Firebase.png" alt="Firebase" title="Firebase" loading="lazy">
                         <img src="assets/images/uikit.png" alt="UIKit" title="UIKit" loading="lazy">
                     </div>
                 </article>
@@ -682,7 +495,7 @@
                 
                     <p class="card__text">
                         Responsable de la calidad en soluciones web y móviles del ecosistema <strong>Fiserv</strong>
-                        (<em>Merchant Center</em>, <em>Club Fiserv</em>, <em>PosNet App</em>).
+                        (<em>Merchant Center</em>, <em>Club Fiserv</em>, <em>Clover App</em>).
                         Ejecución de pruebas en <strong>QA y Producción</strong> con foco en estabilidad, confiabilidad y UX.
                     </p>
                 
@@ -904,7 +717,7 @@
                 <a href="https://github.com/Hyliard" target="_blank" rel="noopener" aria-label="GitHub de Hyliard">
                     <i class="fab fa-github icon-redes"></i>
                 </a>
-                <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Twitch de Hyliard">
+                <a href="https://wa.me/5491167938649?text=Hola Luis,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="WhatsApp de Luis Gerardo Martínez">
                     <i class="fab fa-whatsapp icon icon-redes"></i>
                 </a>
             </div>
@@ -913,7 +726,7 @@
             <hr />
 
             <!-- Derechos de autor -->
-            <p>© 2025 Hyliard. Todos los derechos reservados.</p>
+            <p>© 2026 Hyliard. Todos los derechos reservados.</p>
 
             <!-- Nombre de la persona -->
             <h4>Luis Gerardo Martínez Hernández</h4>
