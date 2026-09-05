@@ -16,21 +16,6 @@ const sunIcon = `
     <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
   </svg>`;
 
-const textToChange = document.querySelectorAll("[data-section]");  // Selecciona todos los elementos con data-section
-
-// Función para cambiar el idioma
-const changeLanguage = async (language) => {
-  const requestJson = await fetch(`assets/icons/languages/${language}.json`);
-  const texts = await requestJson.json();
-
-  // Actualiza el texto de la página según el idioma seleccionado
-  textToChange.forEach((element) => {
-    const section = element.dataset.section;
-    const value = element.dataset.value;
-    element.innerHTML = texts[section][value];
-  });
-};
-
 const applyTheme = (darkModeEnabled) => {
   document.documentElement.dataset.theme = darkModeEnabled ? "dark" : "light";
   toggleIcon.innerHTML = darkModeEnabled ? sunIcon : moonIcon;
@@ -55,37 +40,16 @@ colorSchemePreference.addEventListener("change", (event) => {
   }
 });
 
-// Función para alternar entre "Leer más" y "Leer menos"
-function toggleTextVisibility(event) {
-  event.preventDefault(); // Prevenir la acción predeterminada del enlace (ir al #)
-  
-  const moreText = event.target.previousElementSibling;  // Obtener el texto adicional
-  const readMoreLink = event.target;  // Obtener el enlace "Leer más"
-  
-  if (moreText.style.display === "none") {
-    moreText.style.display = "inline";  // Mostrar el texto adicional
-    readMoreLink.textContent = "Leer menos";  // Cambiar el texto del enlace
-  } else {
-    moreText.style.display = "none";  // Ocultar el texto adicional
-    readMoreLink.textContent = "Leer más";  // Volver al texto original
-  }
-}
-
-// Mantiene compatibilidad con los manejadores inline existentes.
-function toggleText(event) {
-  toggleTextVisibility(event);
-}
-
-// Agregar el evento para los enlaces "Leer más"
-const readMoreLinks = document.querySelectorAll(".read-more");
-readMoreLinks.forEach(link => {
-  link.setAttribute("role", "button");
-  link.setAttribute("aria-expanded", "false");
-  link.addEventListener("click", (event) => {
-    event.currentTarget.setAttribute(
-      "aria-expanded",
-      String(event.currentTarget.textContent === "Leer menos")
-    );
+// Estado y relación accesibles para los textos expandibles.
+document.querySelectorAll(".read-more").forEach((button, index) => {
+  const text = button.previousElementSibling;
+  text.id = `more-text-${index}`;
+  text.hidden = true;
+  button.setAttribute("aria-controls", text.id);
+  button.setAttribute("aria-expanded", "false");
+  button.addEventListener("click", () => {
+    text.hidden = !text.hidden;
+    button.setAttribute("aria-expanded", String(!text.hidden));
+    button.textContent = text.hidden ? "Leer más" : "Leer menos";
   });
 });
- 

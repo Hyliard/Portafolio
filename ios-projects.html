@@ -2,9 +2,9 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Proyectos</title>
+        <title>Proyectos iOS | Luis Gerardo Martínez</title>
         <meta name="description"
-            content="Portafolio de proyectos de desarrollo web y aplicaciones de Luis Gerardo Martínez">
+            content="Aplicaciones iOS con SwiftUI: PassGenerator iOS y TodoListApp. Seguridad, persistencia con SwiftData y accesibilidad.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="css/stylesiOS.css">
@@ -15,7 +15,7 @@
         <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
     </head>
     
-    <body>
+    <body class="ios-projects-page">
         <header class="header">
             <!-- Control de tema -->
             <nav class="switches">
@@ -23,7 +23,6 @@
                     <span id="toggle-icon" class="toggle-theme__icon" aria-hidden="true"></span>
                 </button>
             </nav>
-    
     
             <!-- Menu bar -->
             <nav class="menu__bar" aria-label="Navegación principal">
@@ -38,49 +37,46 @@
         <main class="background">
             <div class="centering">
                 <div class="articles">
-                    <section class="ios-projects-section">
-                        <h1>Proyectos de iOS</h1>
-                        <p>Estos son algunos de mis proyectos de desarrollo de aplicaciones para iOS.</p>
-                        <p>He trabajado en una variedad de aplicaciones, cada una con su propio conjunto de características y tecnologías.
-                            <br> Aquí puedes explorar mis proyectos más destacados.
-                        </p>
-                        <p>Si deseas ver más detalles sobre cada proyecto, no dudes en hacer clic en los enlaces proporcionados.</p>
+                    <section class="ios-projects-section" aria-labelledby="ios-projects-title">
+                        <h1 id="ios-projects-title">Proyectos iOS</h1>
+                        <p>Aplicaciones con Swift y SwiftUI: seguridad, persistencia y accesibilidad, con la calidad como parte del desarrollo.</p>
                     </section>
-                    
-                    <article>
-                        <figure>
-                            <img src="assets/images/pass.png" alt="Preview" loading="lazy">
+<article class="project-card project-card--featured">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/passgenerator-ios-2026.png" alt="PassGenerator iOS en modo claro: longitud, categorías e indicador de fortaleza" loading="lazy">
                         </figure>
                         <div class="article-preview">
-                            <h2>PassGenerator</h2>
-                            <p>
-                                PassGenerator es una aplicación práctica y segura que te permite generar contraseñas robustas en segundos. <br>
-                                Personaliza la longitud, incluye símbolos, números y letras mayúsculas para crear claves fuertes que protejan tus
-                                cuentas. <br>
-                                Ideal para mejorar tu seguridad digital, esta app ofrece una experiencia simple, eficiente y confiable para
-                                gestionar tu privacidad.
-                            </p>
-                            <div class="buttons">
-                                <a href="https://github.com/Hyliard/passGeneratoriOS" target="_blank" rel="noopener"
-                                    class="button button--ghost">Code
-                                </a>
-                            </div>
+                            <h2>PassGenerator iOS</h2>
+                            <p class="project-card__type">Aplicación nativa</p>
+                            <p>Aplicación nativa con SwiftUI y NavigationStack. Genera contraseñas con aleatoriedad segura, indicador de fortaleza y una interfaz accesible en modo claro y oscuro. <span class="more-text" hidden>Usa SecRandomCopyBytes y muestreo con rechazo para evitar sesgo. Garantiza caracteres de cada categoría seleccionada y confirma el copiado al portapapeles de forma accesible.</span> <button type="button" class="read-more">Leer más</button></p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de PassGenerator iOS">
+                                <li>SwiftUI</li><li>NavigationStack</li><li>SecRandomCopyBytes</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/passGeneratoriOS" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
                         </div>
                     </article>
-                    <article>
+<article class="project-card">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/todolistapp.png" alt="Portada de TodoListApp: SwiftUI, SwiftData e iOS 17+" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>TodoListApp</h2>
+                            <p class="project-card__type">Aplicación para iOS 17 o posterior</p>
+                            <p>Gestión de tareas con SwiftUI y persistencia local mediante SwiftData, para iOS 17 o posterior. Permite crear, eliminar y cambiar el estado de tareas desde una interfaz modernizada. </p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de TodoListApp">
+                                <li>SwiftUI</li><li>SwiftData</li><li>iOS 17+</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/TodoListApp" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
+<article class="project-card">
                         <figure>
-                            <img src="assets/images/imc.png" alt="Preview" loading="lazy">
+                            <img src="assets/images/imc.png" alt="Interfaz de IMC Calculator" loading="lazy">
                         </figure>
                         <div class="article-preview">
                             <h2>IMC Calculator</h2>
-                            <p>
-                                IMC Calculator es una aplicación intuitiva y fácil de usar que te permite calcular tu índice
-                                de masa corporal de manera
-                                rápida y precisa. <br> Ingresa tus datos y obtén información sobre tu peso ideal y estado de
-                                salud. <br>Con una interfaz
-                                atractiva y personalizable, esta app es la herramienta perfecta para monitorear tu bienestar físico y alcanzar tus
-                                objetivos de salud.
-                            </p>
+                            <p class="project-card__type">Proyecto de aprendizaje</p>
+                            <p>Proyecto de aprendizaje para calcular el índice de masa corporal a partir del peso y la altura.</p>
                             <div class="buttons">
                                 <a href="https://github.com/Hyliard/AppIMCiOS" target="_blank" rel="noopener"
                                     class="button button--ghost">Code
@@ -88,52 +84,21 @@
                             </div>
                         </div>
                     </article>
-                    <article>
+<article class="project-card">
                         <figure>
-                            <img src="assets/images/App2.png" alt="Preview" loading="lazy">
+                            <img src="assets/images/App2.png" alt="Interfaz de Buscador de Super Heroes" loading="lazy">
                         </figure>
                         <div class="article-preview">
                             <h2>Buscador de Super Heroes</h2>
-                            <p>
-                                Superhero Searcher es una aplicación innovadora que te permite encontrar y explorar
-                                información detallada sobre tus
-                                superhéroes favoritos. <br>Utilizando una potente API, la app ofrece búsquedas rápidas y
-                                precisas, proporcionando
-                                datos sobre la historia, habilidades y apariciones de cada superhéroe.Con una interfaz
-                                moderna y fácil de usar,
-                                Superhero Searcher es la herramienta definitiva para todos los fanáticos de los
-                                superhéroes.
-                            </p>
+                            <p class="project-card__type">Proyecto de aprendizaje</p>
+                            <p>Proyecto de aprendizaje que consulta una API para buscar y explorar información de superhéroes.</p>
                             <div class="buttons">
                                 <a href="https://github.com/Hyliard/SuperheroSearch" target="_blank" rel="noopener"
                                     class="button button--ghost">Code</a>
                             </div>
                         </div>
                     </article>
-                    <article>
-                        <figure>
-                            <img src="assets/images/Todolist.png" alt="Preview" loading="lazy">
-                        </figure>
-                        <div class="article-preview">
-                            <h2>Lista de Tareas </h2>
-                            <p>
-                                sus tareas diarias de manera eficiente. 
-                                <br>Con una interfaz limpia y fácil de usar, permite agregar nuevas tareas, editarlas, 
-                                marcarlas como completadas o eliminarlas.<br> Los usuarios pueden organizar sus actividades,
-                                <br> priorizarlas y tener un control total sobre su productividad. <br>
-                                Además, 
-                                la aplicación guarda tus tareas localmente, 
-                                asegurando que no pierdas tu progreso. <br>
-                                Es una herramienta ideal para mantenerte organizado, <br>
-                                optimizar tu tiempo y mejorar la productividad tanto en el trabajo como en la vida diaria. .
-                            </p>
-                            <div class="buttons">
-                                <a href="https://github.com/Hyliard/productividad" target="_blank" rel="noopener"
-                                    class="button button--ghost">Code</a>
-                            </div>
-                        </div>
     
-                    </article>
                 </div>
             </div>
         </main>
