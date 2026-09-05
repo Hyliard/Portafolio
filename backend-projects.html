@@ -2,12 +2,12 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Proyectos</title>
+        <title>Auth API · Backend | Luis Gerardo Martínez</title>
         <meta name="description"
-            content="Portafolio de proyectos de desarrollo web y aplicaciones de Luis Gerardo Martínez">
+            content="Auth API: experiencia práctica con Node.js, Express, PostgreSQL, Prisma, Docker y autenticación JWT.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="css/stylesback.css">
+        <link rel="stylesheet" href="css/stylesiOS.css">
         <link rel="stylesheet" href="css/theme.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
     </head>
     
-    <body>
+    <body class="backend-projects-page">
         <header class="header">
             <!-- Control de tema -->
             <nav class="switches">
@@ -39,8 +39,24 @@
         <main class="background">
             <div class="centering">
                 <section class="articles" aria-labelledby="backend-title">
-                    <h1 id="backend-title">Proyectos BackEnd</h1>
-                    <p>No hay proyectos publicados actualmente en esta sección.</p>
+                    <div class="backend-projects-intro">
+                        <h1 id="backend-title">Proyectos backend</h1>
+                        <p>Experiencia práctica en APIs REST, persistencia y autenticación como complemento a mi desarrollo iOS.</p>
+                    </div>
+                    <article class="project-card">
+                        <figure class="project-media--cover">
+                            <img src="assets/images/auth-api-cover.svg" alt="Arquitectura de Auth API con Node.js, Prisma, PostgreSQL y Docker" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Auth API</h2>
+                            <p class="project-card__type">API REST</p>
+                            <p>API REST con Node.js y Express, PostgreSQL, Prisma y migraciones. Registro y login con bcryptjs, autenticación JWT y sesiones persistentes con revocación real. <span class="more-text" hidden>Incluye gestión y desvinculación de dispositivos, cambio de contraseña, logout y eliminación de cuenta. Usa middleware de autenticación y errores, Docker Compose y una colección de Postman para validar los endpoints.</span> <button type="button" class="read-more">Leer más</button></p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de Auth API">
+                                <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Prisma</li><li>JWT</li><li>bcryptjs</li><li>Docker Compose</li><li>Postman</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/auth-api" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
                 </section>
             </div>
         </main>

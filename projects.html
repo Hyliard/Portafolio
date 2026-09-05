@@ -2,8 +2,8 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Proyectos</title>
-        <meta name="description" content="Portafolio de proyectos de desarrollo web y aplicaciones de Luis Gerardo Martínez">
+        <title>Proyectos | Luis Gerardo Martínez</title>
+        <meta name="description" content="Proyectos iOS, web y backend de un QA Engineer en transición hacia desarrollo iOS.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="css/styles1.css">
@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" type='text/css'>
         <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
     </head>
-    <body>
+    <body class="projects-page">
         <header class="header">
             <!-- Control de tema -->
             <nav class="switches">
@@ -35,52 +35,70 @@
         </header>
         <main class="background">
             <div class="centering">
-                <h1>Proyectos</h1>
+                <div class="projects-intro">
+                    <h1>Proyectos</h1>
+                    <p>Explora mis proyectos de desarrollo iOS, aplicaciones web y fundamentos de backend. Cada categoría reúne soluciones construidas para practicar arquitectura, seguridad, persistencia, integración de APIs y experiencia de usuario.</p>
+                </div>
                 <div class="articles">
-                    <!-- Dentro de <div class="articles"> -->
-                    <article class="category-card">
-                        <a href="web-projects.html" class="category-link">
-                            <figure>
-                                <img src="assets/images/web-developer-definition-skills-and-responsibilities-908401.png" alt="Proyectos Web" loading="lazy">
-                            </figure>
+                    <article class="category-card category-card--priority">
+                        <a href="ios-projects.html" class="category-link">
+                            <figure><img src="assets/images/projects-ios-cover.png" alt="Ilustración de desarrollo de aplicaciones iOS" loading="lazy"></figure>
                             <div class="article-preview">
-                                <h2>Proyectos Web</h2>
-                                <p>
-                                    Aplicaciones y sitios desarrollados con HTML, CSS, JavaScript y frameworks frontend.
-                                </p>
+                                <div class="category-heading">
+                                    <h2>Proyectos iOS</h2>
+                                    <span class="category-badge">Enfoque actual</span>
+                                </div>
+                                <p class="category-description">Aplicaciones nativas desarrolladas con Swift, SwiftUI y SwiftData, con foco en seguridad, persistencia local, accesibilidad y una experiencia de uso clara.</p>
+                                <ul class="category-technologies" aria-label="Tecnologías" role="list">
+                                    <li>Swift</li>
+                                    <li>SwiftUI</li>
+                                    <li>SwiftData</li>
+                                    <li>Xcode</li>
+                                </ul>
+                                <span class="category-cta">Explorar proyectos iOS →</span>
                             </div>
                         </a>
                     </article>
-                    
                     <article class="category-card">
-                        <a href="ios-projects.html" class="category-link">
-                            <figure>
-                                <img src="assets/images/ios.app.development.png" alt="Proyectos iOS" loading="lazy">
-                            </figure>
+                        <a href="web-projects.html" class="category-link">
+                            <figure><img src="assets/images/projects-web-cover.png" alt="Ilustración de desarrollo de aplicaciones web" loading="lazy"></figure>
                             <div class="article-preview">
-                                <h2>Proyectos iOS</h2>
-                                <p>
-                                    Apps nativas para iPhone/iPad desarrolladas con Swift y SwiftUI.
-                                </p>
+                                <div class="category-heading">
+                                    <h2>Proyectos web</h2>
+
+                                </div>
+                                <p class="category-description">Aplicaciones web interactivas construidas con HTML, CSS y JavaScript, incluyendo IPC Argentina y CodeQR.</p>
+                                <ul class="category-technologies" aria-label="Tecnologías" role="list">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>APIs REST</li>
+                                </ul>
+                                <span class="category-cta">Explorar proyectos web →</span>
                             </div>
                         </a>
                     </article>
                     <article class="category-card">
                         <a href="backend-projects.html" class="category-link">
-                            <figure>
-                                <img src="assets/images/Backend.jpg" alt="Proyectos BackEnd" loading="lazy">
-                            </figure>
+                            <figure><img src="assets/images/projects-backend-cover.png" alt="Representación de proyectos backend" loading="lazy"></figure>
                             <div class="article-preview">
-                                <h2>Proyectos BackEnd</h2>
-                                <p>
-                                    Aplicaciones y servicios desarrollados con Node.js, Express y MongoDB.
-                                </p>
+                                <div class="category-heading">
+                                    <h2>Proyectos backend</h2>
+
+                                </div>
+                                <p class="category-description">Fundamentos de backend aplicados en Auth API, con autenticación, persistencia, sesiones y validación de endpoints.</p>
+                                <ul class="category-technologies" aria-label="Tecnologías" role="list">
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Prisma</li>
+                                </ul>
+                                <span class="category-cta">Explorar proyectos backend →</span>
                             </div>
                         </a>
                     </article>
                 </div>
             </div>
-                
         </main>
 
 
