@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Proyectos iOS | Luis Gerardo Martínez</title>
         <meta name="description"
-            content="Aplicaciones iOS con SwiftUI: PassGenerator iOS y TodoListApp. Seguridad, persistencia con SwiftData y accesibilidad.">
+            content="Aplicaciones iOS con SwiftUI: ContractorHoursPay, PassGenerator iOS y TodoListApp. Consumo de APIs REST, seguridad, persistencia con SwiftData y accesibilidad.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="css/stylesiOS.css">
@@ -39,8 +39,22 @@
                 <div class="articles">
                     <section class="ios-projects-section" aria-labelledby="ios-projects-title">
                         <h1 id="ios-projects-title">Proyectos iOS</h1>
-                        <p>Aplicaciones con Swift y SwiftUI: seguridad, persistencia y accesibilidad, con la calidad como parte del desarrollo.</p>
+                        <p>Aplicaciones con Swift y SwiftUI: consumo de APIs, seguridad, persistencia y accesibilidad, con la calidad como parte del desarrollo.</p>
                     </section>
+<article class="project-card project-card--featured">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/contractorhourspay.png" alt="ContractorHoursPay: resumen mensual con monto estimado, horas trabajadas, cobrado, pendiente y vencido" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>ContractorHoursPay</h2>
+                            <p class="project-card__type">Aplicación nativa conectada a API</p>
+                            <p>App para contratistas que registran horas y cobran por hora. Gestiona clientes, contratos con tarifa normal y de horas extra, registros de trabajo, facturas y pagos, con un resumen mensual de lo generado, cobrado, pendiente y vencido. <span class="more-text" hidden>Consume mi <a href="backend-projects.html">Auth API</a> con URLSession, sin librerías externas: registro, inicio de sesión, cambio de contraseña, eliminación de cuenta, gestión de dispositivos y avatar. Arquitectura MVVM con servicios por recurso, entornos configurables con xcconfig (local, Raspberry Pi y Tailscale) y herramientas de desarrollo con inspector de red y logs sanitizados.</span> <button type="button" class="read-more">Leer más</button></p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de ContractorHoursPay">
+                                <li>SwiftUI</li><li>MVVM</li><li>URLSession</li><li>API REST</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/ContractorHoursPay" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
 <article class="project-card project-card--featured">
                         <figure class="project-media--mobile">
                             <img src="assets/images/passgenerator-ios-2026.png" alt="PassGenerator iOS en modo claro: longitud, categorías e indicador de fortaleza" loading="lazy">
@@ -67,6 +81,62 @@
                                 <li>SwiftUI</li><li>SwiftData</li><li>iOS 17+</li>
                             </ul>
                             <div class="buttons"><a href="https://github.com/Hyliard/TodoListApp" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
+<article class="project-card">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/stepcounter.png" alt="Step Counter: menú con contador de pasos, cronómetro, temporizador y alarma" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Step Counter</h2>
+                            <p class="project-card__type">Proyecto de aprendizaje</p>
+                            <p>Suite de tiempo con contador de pasos mediante el podómetro del dispositivo, cronómetro, temporizador y alarma con notificaciones locales.</p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de Step Counter">
+                                <li>SwiftUI</li><li>CoreMotion</li><li>UserNotifications</li><li>MVVM</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/stepCounter" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
+<article class="project-card">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/convertidor-moneda.png" alt="Conversor de Moneda: cantidad, selección de monedas y botón Convertir" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Conversor de Moneda</h2>
+                            <p class="project-card__type">Proyecto de aprendizaje</p>
+                            <p>Convierte montos entre USD, EUR, ARS, GBP, JPY, AUD y CAD consultando tasas en tiempo real de ExchangeRate-API, con validación de la cantidad ingresada.</p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de Conversor de Moneda">
+                                <li>SwiftUI</li><li>URLSession</li><li>API REST</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/ConvertidorMoneda" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
+<article class="project-card">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/productividad.png" alt="Productividad: inicio con lista de tareas, calendario y bloc de notas" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>Productividad</h2>
+                            <p class="project-card__type">Proyecto de aprendizaje</p>
+                            <p>App de productividad personal con tres secciones: lista de tareas para crear, editar y eliminar, calendario de fechas y eventos, y bloc de notas.</p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de Productividad">
+                                <li>SwiftUI</li><li>NavigationStack</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/productividad" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
+                        </div>
+                    </article>
+<article class="project-card">
+                        <figure class="project-media--mobile">
+                            <img src="assets/images/swiftui-login-flow.jpg" alt="SwiftUI Login Flow: bienvenida con botones Iniciar sesión y Crear cuenta" loading="lazy">
+                        </figure>
+                        <div class="article-preview">
+                            <h2>SwiftUI Login Flow</h2>
+                            <p class="project-card__type">Proyecto de aprendizaje</p>
+                            <p>Flujo de inicio de sesión y registro con validación de campos vacíos y formato de correo, navegación condicional e interfaz con degradados.</p>
+                            <ul class="project-card__technologies" aria-label="Tecnologías de SwiftUI Login Flow">
+                                <li>SwiftUI</li><li>Validación de formularios</li>
+                            </ul>
+                            <div class="buttons"><a href="https://github.com/Hyliard/SwiftUILoginFlow" target="_blank" rel="noopener" class="button button--ghost">Code</a></div>
                         </div>
                     </article>
 <article class="project-card">
