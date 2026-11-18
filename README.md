@@ -14,10 +14,11 @@ QA Engineer con experiencia profesional en productos web y móviles, banca y med
 
 | Proyecto | Descripción | Código |
 | --- | --- | --- |
+| ContractorHoursPay | SwiftUI y MVVM conectada a Auth API con URLSession. Clientes, contratos con tarifa por hora y horas extra, registros de trabajo, facturas, pagos y resumen mensual. Entornos con xcconfig. | [Repositorio](https://github.com/Hyliard/ContractorHoursPay) |
 | PassGenerator iOS | SwiftUI, NavigationStack, SecRandomCopyBytes y muestreo con rechazo. Categorías garantizadas, fortaleza, copiado accesible y modos claro/oscuro. | [Repositorio](https://github.com/Hyliard/passGeneratoriOS) |
 | TodoListApp | SwiftUI y SwiftData en iOS 17+. Creación, eliminación y cambio de estado de tareas con persistencia local. | [Repositorio](https://github.com/Hyliard/TodoListApp) |
 | IPC Argentina | Ajustes monetarios por composición de inflación mensual del BCRA (API v4, variable 27). Períodos trimestrales, validación de datos e historial local con registros automáticos y manuales. | [Repositorio](https://github.com/Hyliard/IPCArgentina) |
-| CodeQR | Generación de QR con HTML, CSS y JavaScript. Interfaz responsive, validación de enlaces y modos claro/oscuro. | [Repositorio](https://github.com/Hyliard/CodeQR) · [Demo](https://hyliard.github.io/CodeQR/) |
+| CodeQR | Generador de QR personalizados con Next.js, React, TypeScript, Tailwind CSS y Zustand. Enlaces, WiFi, contacto, redes, pagos y eventos; plantillas, degradados, logo, marcos y descarga en alta calidad. Exportación estática, 100 % en el navegador. | [Repositorio](https://github.com/Hyliard/CodeQR) · [Demo](https://hyliard.github.io/CodeQR/) |
 | Auth API | API REST con Node.js, Express, PostgreSQL, Prisma y Docker Compose. bcryptjs, JWT, sesiones persistentes y revocables, gestión de dispositivos y colección Postman. | [Repositorio](https://github.com/Hyliard/auth-api) |
 | Portafolio personal | Experiencia profesional y selección de proyectos, navegación por categorías, tema persistente y textos expandibles. | [Repositorio](https://github.com/Hyliard/Portafolio) |
 
@@ -53,7 +54,7 @@ LICENSE                    Licencia MIT
 
 Se mantiene la estructura visual existente, las tarjetas y los modos claro y oscuro. El tema se guarda en `localStorage`; sin preferencia guardada se utiliza la del sistema. Los controles incluyen foco visible y los botones «Leer más» comunican su estado expandido.
 
-PassGenerator, TodoListApp, CodeQR e IPC Argentina utilizan capturas PNG, presentadas mediante CSS sin deformar sus proporciones. Auth API conserva una portada técnica SVG. Las categorías iOS, web y backend utilizan las portadas `projects-ios-cover.png`, `projects-web-cover.png` y `projects-backend-cover.png`, respectivamente.
+ContractorHoursPay, PassGenerator, TodoListApp, CodeQR e IPC Argentina utilizan capturas PNG (los proyectos iOS de aprendizaje también usan capturas del simulador), presentadas mediante CSS sin deformar sus proporciones. Auth API conserva una portada técnica SVG. Las categorías iOS, web y backend utilizan las portadas `projects-ios-cover.png`, `projects-web-cover.png` y `projects-backend-cover.png`, respectivamente.
 
 Para revisar cambios, recorrer las seis páginas mediante HTTP, comprobar navegación, temas, textos expandibles, imágenes y tamaños móvil/tablet/escritorio. Ejecutar `git diff --check` antes de publicar.
 
